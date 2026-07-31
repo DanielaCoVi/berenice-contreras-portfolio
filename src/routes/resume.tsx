@@ -16,7 +16,8 @@ export const Route = createFileRoute("/resume")({
       { property: "og:title", content: "Trayectoria — Berenice Contreras" },
       {
         property: "og:description",
-        content: "Doce años diseñando plataformas analíticas y sistemas operativos en Latam.",
+        content:
+          "Especializada en productos analíticos, plataformas enterprise y sistemas internos donde datos, procesos y personas se alinean para escalar.",
       },
     ],
   }),
