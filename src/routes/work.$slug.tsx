@@ -55,12 +55,21 @@ function CasePage() {
           {t(work.back)}
         </Link>
         <p className="eyebrow mt-10">
-          Case {study.index} · {t(study.meta)}
+          {study.index} · {study.year} · {t(study.category)}
         </p>
         <h1 className="display mt-5 max-w-4xl text-[2.4rem] sm:text-6xl">{t(study.title)}</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           {t(study.summary)}
         </p>
+        <div className="mt-14 overflow-hidden rounded-2xl border border-border">
+          <img
+            src={study.cover}
+            alt={t(study.title)}
+            width={1600}
+            height={1000}
+            className="aspect-[16/9] w-full object-cover"
+          />
+        </div>
       </header>
 
       <Section label={t(work.sections.context)}>

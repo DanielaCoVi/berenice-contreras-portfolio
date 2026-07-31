@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CaseList } from "@/components/case-list";
 import { Reveal } from "@/components/reveal";
-import { home, work } from "@/lib/content";
+import { home } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -82,17 +82,15 @@ function Index() {
       </section>
 
       {/* Selected work */}
-      <section className="rule-top py-20">
-        <div className="mb-10 flex items-end justify-between gap-6">
-          <h2 className="display text-3xl sm:text-4xl">{t(home.selectedWork)}</h2>
-          <Link
-            to="/work"
-            className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            {t(work.title)} →
-          </Link>
+      <section className="rule-top py-24 md:py-28">
+        <p className="eyebrow">{home.selectedWorkPeriod}</p>
+        <h2 className="display mt-6 text-4xl sm:text-5xl">{t(home.selectedWork)}</h2>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          {t(home.selectedWorkLead)}
+        </p>
+        <div className="mt-14">
+          <CaseList />
         </div>
-        <CaseList />
       </section>
 
       {/* Capacidades */}

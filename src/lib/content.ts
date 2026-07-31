@@ -1,3 +1,8 @@
+import case01 from "@/assets/case-01.jpg";
+import case02 from "@/assets/case-02.jpg";
+import case03 from "@/assets/case-03.jpg";
+import case04 from "@/assets/case-04.jpg";
+
 export type Locale = "es" | "en";
 
 export type L = Record<Locale, string>;
@@ -15,8 +20,8 @@ export const site = {
   name: "Berenice Contreras",
   role: { es: "Senior Product Designer", en: "Senior Product Designer" } as L,
   location: { es: "Latam", en: "Latam" } as L,
-  email: "hola@berenicecontreras.com",
-  linkedin: "https://www.linkedin.com/in/berenicecontreras",
+  email: "berenicecontrerasvillafuerte@gmail.com",
+  linkedin: "https://www.linkedin.com/in/berenice-contreras-villafuerte-891792a8/",
   cv: "/berenice-contreras-cv.pdf",
 };
 
@@ -39,6 +44,11 @@ export const home = {
     { value: "50%", label: { es: "menos pasos operativos", en: "fewer operational steps" } as L },
   ],
   selectedWork: { es: "Proyectos seleccionados", en: "Selected work" } as L,
+  selectedWorkPeriod: "2021 — 2026",
+  selectedWorkLead: {
+    es: "Cuatro casos donde ayudé a organizaciones a alinear datos, procesos y personas para tomar mejores decisiones.",
+    en: "Four cases where I helped organizations align data, processes and people to make better decisions.",
+  } as L,
   capabilitiesLabel: { es: "Capacidades", en: "Capabilities" } as L,
   capabilities: [
     "Enterprise UX",
@@ -68,14 +78,14 @@ export const about = {
   title: { es: "Sobre mí", en: "About" } as L,
   body: {
     es: [
-      "Durante gran parte de mi carrera he trabajado en contextos donde la información estaba disponible, pero era difícil convertirla en decisiones.",
-      "Me especializo en productos analíticos, plataformas enterprise y sistemas internos donde diseño ayuda a transformar complejidad operativa en claridad.",
-      "Mi trabajo combina investigación, arquitectura de información y entendimiento del negocio para construir herramientas que permitan a las organizaciones operar con mayor confianza, eficiencia y capacidad de crecimiento.",
+      "Trabajo en la intersección entre negocio, datos y experiencia de usuario para diseñar sistemas que ayudan a las organizaciones a tomar mejores decisiones.",
+      "Mi experiencia incluye productos analíticos, plataformas enterprise y herramientas internas utilizadas para gestionar operaciones complejas.",
+      "Me especializo en entornos donde el principal desafío no es la falta de información, sino la dificultad para transformarla en claridad operativa.",
     ],
     en: [
-      "For most of my career I have worked in contexts where information was available, but hard to turn into decisions.",
-      "I specialize in analytics products, enterprise platforms and internal systems where design turns operational complexity into clarity.",
-      "My work combines research, information architecture and business understanding to build tools that let organizations operate with more confidence, efficiency and room to grow.",
+      "I work at the intersection of business, data and user experience to design systems that help organizations make better decisions.",
+      "My experience spans analytics products, enterprise platforms and internal tools used to run complex operations.",
+      "I specialize in environments where the main challenge is not a lack of information, but the difficulty of turning it into operational clarity.",
     ],
   } as LArr,
   approachTitle: { es: "Mi enfoque", en: "My approach" } as L,
@@ -121,6 +131,9 @@ export const about = {
 export type CaseStudy = {
   slug: string;
   index: string;
+  year: string;
+  category: L;
+  cover: string;
   title: L;
   meta: L;
   summary: L;
@@ -154,6 +167,9 @@ const PENDING_LIST: LArr = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "datos-fragmentados-decisiones-confiables",
+    year: "2025",
+    category: { es: "Plataforma Analítica Financiera", en: "Financial Analytics Platform" },
+    cover: case01,
     index: "01",
     title: {
       es: "De datos fragmentados a decisiones confiables",
@@ -164,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
       en: "2025 · Financial Analytics Platform",
     },
     summary: {
-      es: "Una organización con información abundante y ninguna versión única de la verdad. El trabajo consistió en reconstruir el modelo de datos y la arquitectura de decisión antes de diseñar una sola pantalla.",
+      es: "Una organización con información dispersa, métricas inconsistentes y múltiples fuentes de verdad. El proyecto consistió en reconstruir el entendimiento del negocio antes de diseñar la plataforma analítica.",
       en: "An organization with abundant information and no single source of truth. The work meant rebuilding the data model and decision architecture before designing a single screen.",
     },
     context: PENDING,
@@ -180,6 +196,9 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "una-empresa-dos-idiomas",
+    year: "2023",
+    category: { es: "Retail Internacional", en: "International Retail" },
+    cover: case02,
     index: "02",
     title: {
       es: "Cuando una empresa habla dos idiomas distintos",
@@ -187,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
     },
     meta: { es: "Retail Internacional · 2023", en: "International Retail · 2023" },
     summary: {
-      es: "Operación y comercial nombraban las mismas cosas de forma distinta. Alinear el lenguaje fue el requisito previo para alinear el sistema.",
+      es: "Once países, dos canales comerciales y múltiples formas de interpretar el negocio. El desafío consistió en crear un lenguaje común para la toma de decisiones.",
       en: "Operations and commercial teams named the same things differently. Aligning language was the prerequisite for aligning the system.",
     },
     context: PENDING,
@@ -203,6 +222,9 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "lo-que-las-encuestas-nunca-mostraron",
+    year: "2021",
+    category: { es: "CRM de Cobranza", en: "Collections CRM" },
+    cover: case03,
     index: "03",
     title: {
       es: "Lo que las encuestas nunca mostraron",
@@ -210,7 +232,7 @@ export const caseStudies: CaseStudy[] = [
     },
     meta: { es: "CRM de Cobranza · 2021", en: "Collections CRM · 2021" },
     summary: {
-      es: "Los indicadores de satisfacción decían una cosa y el comportamiento operativo otra. La investigación de campo cambió la definición del problema.",
+      es: "Los usuarios afirmaban estar satisfechos con el sistema. La investigación reveló años de adaptación a procesos ineficientes que nadie estaba cuestionando.",
       en: "Satisfaction indicators said one thing and operational behavior another. Field research redefined the problem.",
     },
     context: PENDING,
@@ -226,6 +248,9 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "negocio-sin-dependencia-de-una-persona",
+    year: "2021",
+    category: { es: "Plataforma Operativa Interna", en: "Internal Operations Platform" },
+    cover: case04,
     index: "04",
     title: {
       es: "Diseñar para que un negocio deje de depender de una sola persona",
@@ -233,7 +258,7 @@ export const caseStudies: CaseStudy[] = [
     },
     meta: { es: "Plataforma Operativa Interna · 2021", en: "Internal Operations Platform · 2021" },
     summary: {
-      es: "El conocimiento crítico vivía en la cabeza de una persona. El sistema tenía que volverlo explícito, transferible y auditable.",
+      es: "Una operación que dependía completamente de su fundadora. La solución transformó conocimiento individual en procesos escalables y compartidos.",
       en: "Critical knowledge lived in one person's head. The system had to make it explicit, transferable and auditable.",
     },
     context: PENDING,
@@ -247,10 +272,10 @@ export const caseStudies: CaseStudy[] = [
 ];
 
 export const work = {
-  title: { es: "Proyectos", en: "Work" } as L,
+  title: { es: "Proyectos seleccionados", en: "Selected work" } as L,
   intro: {
-    es: "Cuatro sistemas complejos: contexto de negocio, decisiones de arquitectura e impacto operativo. Más narrativa que interfaz.",
-    en: "Four complex systems: business context, architecture decisions and operational impact. More narrative than interface.",
+    es: "Una colección de proyectos donde diseño ayudó a transformar complejidad operativa en claridad para la toma de decisiones.",
+    en: "A collection of projects where design helped turn operational complexity into clarity for decision making.",
   } as L,
   sections: {
     context: { es: "Contexto", en: "Context" } as L,
@@ -273,40 +298,42 @@ export const work = {
 export const resume = {
   title: { es: "Trayectoria", en: "Resume" } as L,
   intro: {
-    es: "Doce años diseñando productos analíticos, plataformas enterprise y sistemas operativos internos en Latam.",
-    en: "Twelve years designing analytics products, enterprise platforms and internal operating systems across Latam.",
+    es: "Especializada en productos analíticos, plataformas enterprise y sistemas internos donde datos, procesos y personas necesitan alinearse para escalar con confianza.",
+    en: "Specialized in analytics products, enterprise platforms and internal systems where data, processes and people need to align in order to scale with confidence.",
   } as L,
   download: { es: "Descargar CV", en: "Download CV" } as L,
   experienceTitle: { es: "Experiencia", en: "Experience" } as L,
-  experience: [
-    {
-      period: "2023 — 2026",
-      role: { es: "Senior Product Designer", en: "Senior Product Designer" } as L,
-      company: { es: "Plataforma Analítica Financiera", en: "Financial Analytics Platform" } as L,
-      text: {
-        es: "[PLACEHOLDER — responsabilidades, alcance de equipo y resultados.]",
-        en: "[PLACEHOLDER — responsibilities, team scope and outcomes.]",
-      } as L,
-    },
-    {
-      period: "2021 — 2023",
-      role: { es: "Product Designer · Enterprise", en: "Product Designer · Enterprise" } as L,
-      company: { es: "Retail Internacional", en: "International Retail" } as L,
-      text: {
-        es: "[PLACEHOLDER — responsabilidades, alcance de equipo y resultados.]",
-        en: "[PLACEHOLDER — responsibilities, team scope and outcomes.]",
-      } as L,
-    },
-    {
-      period: "2018 — 2021",
-      role: { es: "Product Designer", en: "Product Designer" } as L,
-      company: { es: "Sistemas Operativos Internos", en: "Internal Operating Systems" } as L,
-      text: {
-        es: "[PLACEHOLDER — responsabilidades, alcance de equipo y resultados.]",
-        en: "[PLACEHOLDER — responsibilities, team scope and outcomes.]",
-      } as L,
-    },
-  ],
+  experience: {
+    company: "SHU Product Lab",
+    role: {
+      es: "Senior Product Designer · 2021 — Actualidad",
+      en: "Senior Product Designer · 2021 — Present",
+    } as L,
+    body: {
+      es: [
+        "Diseño plataformas analíticas, sistemas internos y productos enterprise para organizaciones en Latinoamérica y Norteamérica.",
+        "Mi trabajo se centra en transformar información compleja en sistemas que permitan tomar decisiones con mayor claridad y reduzcan la complejidad operativa.",
+        "Los proyectos incluyen plataformas financieras multisede, productos SaaS, sistemas internos y herramientas analíticas para la toma de decisiones.",
+      ],
+      en: [
+        "I design analytics platforms, internal systems and enterprise products for organizations across Latin America and North America.",
+        "My work focuses on turning complex information into systems that enable clearer decisions and reduce operational complexity.",
+        "Projects include multi-site financial platforms, SaaS products, internal systems and analytics tools for decision making.",
+      ],
+    } as LArr,
+  },
+  additionalTitle: { es: "Experiencia adicional", en: "Additional experience" } as L,
+  additional: {
+    company: "Henry",
+    role: {
+      es: "Teaching Assistant · Data Science · 2022",
+      en: "Teaching Assistant · Data Science · 2022",
+    } as L,
+    text: {
+      es: "Acompañé estudiantes de Data Science en procesos de aprendizaje colaborativo, resolución de problemas y comprensión de conceptos analíticos.",
+      en: "I supported Data Science students through collaborative learning, problem solving and understanding of analytical concepts.",
+    } as L,
+  },
   skillsTitle: { es: "Especialidades", en: "Specialties" } as L,
   skills: [
     "Enterprise UX",
@@ -317,17 +344,6 @@ export const resume = {
     "Product Strategy",
     "Research Ops",
     "Design Systems",
-  ],
-  educationTitle: { es: "Formación", en: "Education" } as L,
-  education: [
-    {
-      period: "—",
-      title: { es: "[PLACEHOLDER — título / institución]", en: "[PLACEHOLDER — degree / school]" } as L,
-    },
-    {
-      period: "—",
-      title: { es: "[PLACEHOLDER — certificación]", en: "[PLACEHOLDER — certification]" } as L,
-    },
   ],
 };
 
