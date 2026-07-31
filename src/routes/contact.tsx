@@ -119,7 +119,7 @@ function ContactPage() {
               <a
                 href={site.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-lg text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
               >
                 LinkedIn

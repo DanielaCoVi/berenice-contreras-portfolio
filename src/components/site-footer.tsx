@@ -30,7 +30,7 @@ export function SiteFooter() {
               <a
                 href={site.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 LinkedIn
