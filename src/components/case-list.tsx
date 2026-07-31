@@ -39,7 +39,7 @@ export function CaseList({ limit }: { limit?: number }) {
                 {t(c.title)}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">{t(c.summary)}</p>
-              <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+              <span className="mt-auto pt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                 {t(work.readCase)}
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </span>
