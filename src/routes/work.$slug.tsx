@@ -1,8 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { CaseOneBody } from "@/components/case-one";
 import { caseStudies, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
+
 
 export const Route = createFileRoute("/work/$slug")({
   loader: ({ params }) => {
