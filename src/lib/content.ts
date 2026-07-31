@@ -172,16 +172,16 @@ export const caseStudies: CaseStudy[] = [
     cover: case01,
     index: "01",
     title: {
-      es: "De datos fragmentados a decisiones confiables",
-      en: "From fragmented data to trustworthy decisions",
+      es: "De cinco sistemas desconectados a una única fuente de verdad para 25 sedes",
+      en: "From five disconnected systems to a single source of truth for 25 sites",
     },
     meta: {
-      es: "2025 · Plataforma Analítica Financiera",
-      en: "2025 · Financial Analytics Platform",
+      es: "Proyecto confidencial (NDA) · 2025 · Plataforma Analítica Financiera",
+      en: "Confidential project (NDA) · 2025 · Financial Analytics Platform",
     },
     summary: {
-      es: "Una organización con información dispersa, métricas inconsistentes y múltiples fuentes de verdad. El proyecto consistió en reconstruir el entendimiento del negocio antes de diseñar la plataforma analítica.",
-      en: "An organization with abundant information and no single source of truth. The work meant rebuilding the data model and decision architecture before designing a single screen.",
+      es: "La empresa había multiplicado su operación, pero no su capacidad para comprenderla. Mi trabajo no consistía en diseñar otro dashboard, sino en construir una única fuente de verdad para la toma de decisiones.",
+      en: "The company had multiplied its operation, but not its ability to understand it. The work was not another dashboard, but a single source of truth for decision making.",
     },
     context: PENDING,
     problem: PENDING,
@@ -189,10 +189,11 @@ export const caseStudies: CaseStudy[] = [
     decision: PENDING,
     process: PENDING_LIST,
     impact: [
-      { value: "187K+", label: { es: "registros analizados", en: "records analyzed" } },
-      { value: "—", label: { es: "[métrica pendiente]", en: "[metric pending]" } },
+      { value: "25", label: { es: "sedes unificadas", en: "sites unified" } },
+      { value: "187K+", label: { es: "registros mensuales", en: "monthly records" } },
     ],
     reflection: PENDING,
+
   },
   {
     slug: "una-empresa-dos-idiomas",
