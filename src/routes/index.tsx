@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CaseList } from "@/components/case-list";
 import { Reveal } from "@/components/reveal";
-import { home, work } from "@/lib/content";
+import { home } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
