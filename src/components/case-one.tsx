@@ -141,18 +141,6 @@ export function CaseOneBody() {
           indicadores estandarizados, actualización diaria y una arquitectura preparada para
           acompañar el crecimiento futuro del negocio.
         </P>
-        <dl className="grid gap-8 pt-2 sm:grid-cols-3">
-          {[
-            { value: "25", label: "sedes" },
-            { value: "187K+", label: "registros mensuales" },
-            { value: "5", label: "sistemas integrados" },
-          ].map((m) => (
-            <div key={m.label} className="border-t-2 border-primary pt-4">
-              <dt className="font-semibold tabular-nums text-4xl text-foreground">{m.value}</dt>
-              <dd className="mt-2 text-sm text-muted-foreground">{m.label}</dd>
-            </div>
-          ))}
-        </dl>
         <figure className="overflow-hidden rounded-2xl border border-border">
           <img
             src={impact}

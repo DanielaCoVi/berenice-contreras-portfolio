@@ -59,9 +59,22 @@ function CasePage() {
         </Link>
         <p className="eyebrow mt-10">{t(study.meta)}</p>
         <h1 className="display mt-5 max-w-4xl text-[2.4rem] sm:text-6xl">{t(study.title)}</h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          {t(study.summary)}
-        </p>
+        {isCaseOne ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              La organización había crecido de 10 a 25 sedes, pero seguía tomando decisiones a partir
+              de múltiples fuentes de información inconsistentes.
+            </p>
+            <p>
+              Mi trabajo consistió en transformar cinco sistemas desconectados en una única
+              plataforma analítica para la toma de decisiones.
+            </p>
+          </div>
+        ) : (
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            {t(study.summary)}
+          </p>
+        )}
         <div className="mt-14 overflow-hidden rounded-2xl border border-border">
           <img
             src={study.cover}
@@ -71,26 +84,6 @@ function CasePage() {
             className="aspect-[16/9] w-full object-cover"
           />
         </div>
-        {isCaseOne && (
-          <div className="mt-14 grid gap-6 md:grid-cols-12">
-            <div className="md:col-span-8 md:col-start-4 space-y-6">
-              <p className="display text-2xl leading-snug text-foreground sm:text-3xl">
-                La empresa había multiplicado su operación, pero no su capacidad para comprenderla.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Al crecer de 10 a 25 sedes, comenzó a depender de múltiples reportes, hojas de
-                cálculo y dashboards independientes para entender su operación financiera.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                La información existía. Lo que no existía era una manera confiable de interpretarla.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Mi trabajo no consistía en diseñar otro dashboard. Consistía en construir una única
-                fuente de verdad para la toma de decisiones.
-              </p>
-            </div>
-          </div>
-        )}
       </header>
 
       {isCaseOne ? (
