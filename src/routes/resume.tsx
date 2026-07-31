@@ -24,7 +24,7 @@ export const Route = createFileRoute("/resume")({
 });
 
 function ResumePage() {
-  const { t } = useI18n();
+  const { t, tl } = useI18n();
 
   return (
     <div className="mx-auto max-w-6xl px-6">
