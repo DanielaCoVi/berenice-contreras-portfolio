@@ -43,25 +43,39 @@ function ResumePage() {
         </a>
       </header>
 
-      <section className="rule-top py-16">
-        <h2 className="eyebrow">{t(resume.experienceTitle)}</h2>
-        <ul className="mt-10 space-y-12">
-          {resume.experience.map((e, i) => (
-            <Reveal as="li" key={e.period} delay={i * 0.05} className="grid gap-4 md:grid-cols-12">
-              <p className="text-sm tabular-nums text-muted-foreground md:col-span-3">{e.period}</p>
-              <div className="md:col-span-9">
-                <h3 className="display text-2xl">{t(e.role)}</h3>
-                <p className="mt-1 text-sm font-medium text-primary">{t(e.company)}</p>
-                <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                  {t(e.text)}
+      <section className="rule-top py-20 md:py-24">
+        <div className="grid gap-10 md:grid-cols-12">
+          <h2 className="eyebrow md:col-span-3">{t(resume.experienceTitle)}</h2>
+          <div className="md:col-span-9">
+            <Reveal>
+              <h3 className="display text-3xl sm:text-4xl">{resume.experience.company}</h3>
+              <p className="mt-2 text-sm font-medium text-primary">{t(resume.experience.role)}</p>
+              <div className="mt-8 space-y-6">
+                {tl(resume.experience.body).map((p) => (
+                  <p key={p} className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div className="mt-16 border-t border-border pt-10">
+                <p className="eyebrow">{t(resume.additionalTitle)}</p>
+                <h3 className="display mt-5 text-2xl">{resume.additional.company}</h3>
+                <p className="mt-2 text-sm font-medium text-muted-foreground">
+                  {t(resume.additional.role)}
+                </p>
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                  {t(resume.additional.text)}
                 </p>
               </div>
             </Reveal>
-          ))}
-        </ul>
+          </div>
+        </div>
       </section>
 
-      <section className="rule-top grid gap-8 py-16 md:grid-cols-12">
+      <section className="rule-top grid gap-8 py-20 md:grid-cols-12">
         <h2 className="eyebrow md:col-span-3">{t(resume.skillsTitle)}</h2>
         <ul className="flex flex-wrap gap-2 md:col-span-9">
           {resume.skills.map((s) => (
@@ -70,18 +84,6 @@ function ResumePage() {
               className="rounded-md border border-border bg-surface px-3 py-1.5 text-sm text-muted-foreground"
             >
               {s}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="rule-top grid gap-8 py-16 md:grid-cols-12">
-        <h2 className="eyebrow md:col-span-3">{t(resume.educationTitle)}</h2>
-        <ul className="space-y-5 md:col-span-9">
-          {resume.education.map((e, i) => (
-            <li key={i} className="flex flex-wrap gap-x-6 border-b border-border pb-5">
-              <span className="text-sm tabular-nums text-muted-foreground">{e.period}</span>
-              <span className="text-base text-foreground">{t(e.title)}</span>
             </li>
           ))}
         </ul>
