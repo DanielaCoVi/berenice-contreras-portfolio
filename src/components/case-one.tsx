@@ -102,8 +102,12 @@ export function CaseOneBody() {
             Dashboard final implementado
           </h3>
           <div className="mt-6 flex min-h-64 items-center justify-center rounded-xl border border-dashed border-border bg-surface p-8 text-center text-sm text-muted-foreground">
-            Espacio reservado para la captura real del dashboard.
+            Espacio reservado para la captura real del dashboard (Dashboard_upgrade_f).
           </div>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Dashboard ejecutivo diseñado para consolidar información financiera y operativa de 25
+            sedes en una única experiencia analítica.
+          </p>
         </div>
       </Section>
 
