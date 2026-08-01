@@ -31,14 +31,28 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1">
-          <button
-            type="button"
-            onClick={() => setLocale(locale === "es" ? "en" : "es")}
+          <div
+            className="mr-1 flex items-center gap-0.5 text-xs font-medium tracking-widest"
             aria-label={t(ui.langToggle)}
-            className="rounded-md px-2 py-1.5 text-xs font-medium tracking-widest text-muted-foreground transition-colors hover:text-foreground"
           >
-            {locale === "es" ? "ES" : "EN"}
-          </button>
+            {(["es", "en"] as const).map((code) => (
+              <button
+                key={code}
+                type="button"
+                onClick={() => setLocale(code)}
+                aria-pressed={locale === code}
+                className={
+                  "rounded-md px-2 py-1.5 transition-colors " +
+                  (locale === code
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground")
+                }
+              >
+                {code.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
           <button
             type="button"
             onClick={toggle}
