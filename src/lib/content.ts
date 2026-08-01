@@ -374,3 +374,282 @@ export const ui = {
     en: "Berenice Contreras · Senior Product Designer · Latam",
   } as L,
 };
+
+export const caseOne = {
+  hero: {
+    es: [
+      "La organización había crecido de 10 a 25 sedes, pero seguía tomando decisiones a partir de múltiples fuentes de información inconsistentes.",
+      "Mi trabajo consistió en transformar cinco sistemas desconectados en una única plataforma analítica para la toma de decisiones.",
+    ],
+    en: [
+      "The organization had grown from 10 to 25 sites, yet it kept making decisions from multiple inconsistent sources of information.",
+      "My work was to turn five disconnected systems into a single analytics platform for decision making.",
+    ],
+  } as LArr,
+  problem: {
+    label: { es: "El verdadero problema", en: "The real problem" } as L,
+    p: {
+      es: [
+        "Durante las primeras semanas entendí que el desafío no era tecnológico.",
+        "La organización ya tenía dashboards. Ya tenía bases de datos. Ya tenía reportes. Lo que no tenía era una definición compartida del negocio.",
+        "El mismo indicador podía interpretarse de manera distinta dependiendo del área consultada. Algunas métricas carecían de reglas claras y el diccionario de datos presentaba inconsistencias que comprometían la confiabilidad de toda la información.",
+        "Diseñar sobre esa base solo habría producido un dashboard visualmente correcto, pero conceptualmente equivocado. Antes de pensar en interfaces, era necesario construir entendimiento.",
+      ],
+      en: [
+        "In the first weeks I understood that the challenge was not technological.",
+        "The organization already had dashboards. It already had databases. It already had reports. What it did not have was a shared definition of the business.",
+        "The same indicator could be interpreted differently depending on the team you asked. Some metrics had no clear rules, and the data dictionary held inconsistencies that compromised the reliability of the whole information layer.",
+        "Designing on top of that would only have produced a visually correct but conceptually wrong dashboard. Before thinking about interfaces, understanding had to be built.",
+      ],
+    } as LArr,
+  },
+  role: {
+    label: { es: "Mi rol", en: "My role" } as L,
+    p: {
+      es: [
+        "Lideré el proceso de descubrimiento funcional y el diseño del producto analítico.",
+        "Colaboré con los equipos de Negocio y Data para reconstruir el contexto del proyecto, validar los requerimientos directamente con los responsables de cada proceso y definir una arquitectura analítica basada en reglas de negocio compartidas, no en supuestos.",
+        "Mi responsabilidad no fue únicamente diseñar la experiencia visual del dashboard. Fue asegurar que la información representara correctamente la realidad del negocio antes de comenzar cualquier desarrollo.",
+      ],
+      en: [
+        "I led the functional discovery process and the design of the analytics product.",
+        "I worked with the Business and Data teams to rebuild the project context, validate requirements directly with each process owner and define an analytics architecture based on shared business rules rather than assumptions.",
+        "My responsibility was not only designing the visual experience of the dashboard. It was making sure the information correctly represented the reality of the business before any development started.",
+      ],
+    } as LArr,
+  },
+  shift: {
+    label: { es: "Cambiando el enfoque", en: "Shifting the approach" } as L,
+    p: {
+      es: [
+        "Antes de continuar decidí detener el proyecto.",
+        "Solicité acceso al requerimiento original enviado por negocio, entrevisté directamente a los responsables de cada proceso y reconstruí el contexto funcional desde la fuente.",
+        "En lugar de asumir que la documentación existente era correcta, validé personalmente cada regla de negocio antes de convertirla en un indicador. Ese cambio de enfoque permitió detectar inconsistencias que todavía no habían llegado al producto final y evitó que decisiones incorrectas se propagaran a toda la solución analítica.",
+        "Comprender el negocio terminó siendo mucho más importante que comenzar a diseñar rápidamente.",
+      ],
+      en: [
+        "Before moving forward, I decided to stop the project.",
+        "I requested the original business requirement, interviewed each process owner directly and rebuilt the functional context from the source.",
+        "Instead of assuming the existing documentation was correct, I personally validated every business rule before turning it into an indicator. That shift surfaced inconsistencies that had not yet reached the final product and prevented wrong decisions from spreading across the analytics solution.",
+        "Understanding the business turned out to matter far more than starting to design quickly.",
+      ],
+    } as LArr,
+    quote: {
+      es: "“Detuve el proyecto para validar el negocio antes de diseñar.”",
+      en: "“I stopped the project to validate the business before designing.”",
+    } as L,
+  },
+  architecture: {
+    label: {
+      es: "Diseñando una arquitectura para decidir",
+      en: "Designing an architecture for deciding",
+    } as L,
+    p: {
+      es: [
+        "Con el contexto validado diseñé una arquitectura analítica capaz de consolidar información proveniente de cinco sistemas distintos.",
+        "La navegación fue estructurada para comenzar desde una visión ejecutiva y profundizar progresivamente hasta el detalle operativo mediante filtros, segmentaciones y jerarquías consistentes.",
+        "Cada indicador respondía a una necesidad concreta del negocio. Cada visualización tenía un propósito. No buscaba mostrar más información: buscaba reducir la incertidumbre.",
+      ],
+      en: [
+        "With the context validated, I designed an analytics architecture able to consolidate information from five different systems.",
+        "Navigation was structured to start from an executive view and drill progressively into operational detail through consistent filters, segments and hierarchies.",
+        "Every indicator answered a concrete business need. Every visualization had a purpose. The goal was not to show more information: it was to reduce uncertainty.",
+      ],
+    } as LArr,
+    diagramAlt: {
+      es: "Diagrama: cinco sistemas, validación de negocio, modelo analítico y dashboard ejecutivo como fuente única de verdad",
+      en: "Diagram: five systems, business validation, analytics model and executive dashboard as a single source of truth",
+    } as L,
+  },
+  dashboard: {
+    title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
+    alt: {
+      es: "Dashboard ejecutivo con indicadores de fidelización, agendamiento y cumplimiento RTM por sede",
+      en: "Executive dashboard with loyalty, scheduling and RTM compliance indicators by site",
+    } as L,
+    caption: {
+      es: "Dashboard ejecutivo diseñado para consolidar información financiera y operativa de 25 sedes en una única experiencia analítica.",
+      en: "Executive dashboard designed to consolidate financial and operational information from 25 sites into a single analytics experience.",
+    } as L,
+  },
+  ai: {
+    label: { es: "IA como acelerador del proceso", en: "AI as a process accelerator" } as L,
+    p: {
+      es: [
+        "Aunque el proyecto estuvo basado principalmente en entrevistas, análisis documental y validación con los equipos de negocio, incorporé herramientas de Inteligencia Artificial como apoyo durante las etapas de investigación y documentación.",
+        "Utilicé Claude y ChatGPT para acelerar el aprendizaje del dominio automotriz antes de las reuniones con los stakeholders, preparar preguntas para validar reglas de negocio e indicadores, y organizar hallazgos obtenidos durante el proceso de descubrimiento.",
+        "La definición de KPIs, la validación de requerimientos, la arquitectura de información, las decisiones de producto y el diseño de la solución fueron realizadas por mí junto con los equipos de Negocio y Data.",
+        "La IA aceleró el trabajo operativo. Las decisiones continuaron siendo humanas.",
+      ],
+      en: [
+        "Although the project was based mainly on interviews, document analysis and validation with business teams, I used AI tools to support the research and documentation stages.",
+        "I used Claude and ChatGPT to accelerate learning the automotive domain before stakeholder meetings, prepare questions to validate business rules and indicators, and organize findings from the discovery process.",
+        "KPI definition, requirement validation, information architecture, product decisions and solution design were done by me together with the Business and Data teams.",
+        "AI accelerated the operational work. The decisions remained human.",
+      ],
+    } as LArr,
+  },
+  impact: {
+    label: { es: "Impacto", en: "Impact" } as L,
+    p: {
+      es: [
+        "La plataforma permitió consolidar la información financiera y operativa de 25 sedes en una única experiencia analítica.",
+        "Se integraron más de 187 000 registros mensuales provenientes de cinco sistemas distintos, eliminando la dependencia de reportes distribuidos por correo y reduciendo inconsistencias entre áreas.",
+        "El resultado fue una única fuente de información para toda la organización, con indicadores estandarizados, actualización diaria y una arquitectura preparada para acompañar el crecimiento futuro del negocio.",
+      ],
+      en: [
+        "The platform consolidated financial and operational information from 25 sites into a single analytics experience.",
+        "More than 187,000 monthly records from five different systems were integrated, removing the dependency on reports distributed by email and reducing inconsistencies between teams.",
+        "The result was a single source of information for the whole organization, with standardized indicators, daily updates and an architecture ready to support future growth.",
+      ],
+    } as LArr,
+    alt: {
+      es: "Métricas de impacto: 25 sedes, 187K+ registros mensuales y 5 sistemas integrados",
+      en: "Impact metrics: 25 sites, 187K+ monthly records and 5 integrated systems",
+    } as L,
+  },
+  learned: {
+    label: { es: "Lo que aprendí", en: "What I learned" } as L,
+    p: {
+      es: [
+        "Este proyecto reforzó una idea que hoy guía mi forma de diseñar productos basados en datos.",
+        "Los dashboards rara vez fracasan por un problema visual. Generalmente fracasan cuando negocio, datos y tecnología no comparten una misma definición de la realidad.",
+      ],
+      en: [
+        "This project reinforced an idea that guides how I design data products today.",
+        "Dashboards rarely fail because of a visual problem. They usually fail when business, data and technology do not share the same definition of reality.",
+      ],
+    } as LArr,
+    quote: {
+      es: "Diseñar productos analíticos significa construir confianza antes que interfaces. Cuando toda la organización habla el mismo lenguaje, la visualización deja de ser un reporte y se convierte en una herramienta real para tomar decisiones.",
+      en: "Designing analytics products means building trust before interfaces. When the whole organization speaks the same language, visualization stops being a report and becomes a real decision-making tool.",
+    } as L,
+  },
+};
+
+export const caseTwo = {
+  hero: {
+    es: [
+      "La organización tenía acceso a la misma información. Lo que no compartía era la misma manera de interpretarla.",
+      "Mientras el negocio digital hablaba de órdenes, el negocio físico hablaba de transacciones. Ambos describían prácticamente el mismo comportamiento comercial, pero utilizaban lenguajes diferentes para tomar decisiones.",
+    ],
+    en: [
+      "The organization had access to the same information. What it did not share was the same way of interpreting it.",
+      "While the digital business spoke about orders, the physical business spoke about transactions. Both described almost the same commercial behavior, but used different languages to make decisions.",
+    ],
+  } as LArr,
+  twoBusinesses: {
+    label: { es: "Dos negocios. Una misma realidad.", en: "Two businesses. One reality." } as L,
+    p: {
+      es: [
+        "El proyecto reunía información de once países y dos canales de venta que habían evolucionado de forma independiente.",
+        "Cada equipo había construido su propio modelo mental. Sus propios indicadores. Sus propios reportes. Su propia forma de leer el negocio.",
+        "Como consecuencia, una misma reunión podía terminar con interpretaciones completamente distintas a partir de los mismos datos.",
+      ],
+      en: [
+        "The project brought together information from eleven countries and two sales channels that had evolved independently.",
+        "Each team had built its own mental model. Its own indicators. Its own reports. Its own way of reading the business.",
+        "As a result, the same meeting could end with completely different interpretations of the same data.",
+      ],
+    } as LArr,
+  },
+  role: {
+    label: { es: "Mi rol", en: "My role" } as L,
+    p: {
+      es: [
+        "Como Product Designer fui responsable de comprender las necesidades de los diferentes stakeholders, estructurar la arquitectura de información y diseñar la experiencia analítica que permitiera interpretar el desempeño comercial desde una única plataforma.",
+        "Trabajé junto con equipos de negocio físico y digital para construir un lenguaje común que facilitara la toma de decisiones.",
+      ],
+      en: [
+        "As Product Designer I was responsible for understanding stakeholder needs, structuring the information architecture and designing the analytics experience that allowed commercial performance to be read from a single platform.",
+        "I worked with physical and digital business teams to build a common language that supported decision making.",
+      ],
+    } as LArr,
+  },
+  beforeVisualizing: {
+    label: { es: "Diseñar antes de visualizar", en: "Designing before visualizing" } as L,
+    p: {
+      es: [
+        "El trabajo comenzó mucho antes del primer wireframe.",
+        "Realicé sesiones de trabajo con la Vicepresidencia de Servicios Digitales, líderes de Retail Físico, responsables regionales de Business Data y Operaciones para comprender cómo cada uno entendía el desempeño comercial.",
+        "En esas conversaciones aparecieron las verdaderas diferencias. No estaban en las bases de datos. Estaban en el lenguaje.",
+        "Antes de construir dashboards era necesario construir un modelo común para interpretar el negocio.",
+      ],
+      en: [
+        "The work started long before the first wireframe.",
+        "I ran working sessions with the Digital Services VP, Physical Retail leaders and regional Business Data and Operations owners to understand how each of them read commercial performance.",
+        "The real differences surfaced in those conversations. They were not in the databases. They were in the language.",
+        "Before building dashboards, a common model for interpreting the business had to be built.",
+      ],
+    } as LArr,
+    quote: {
+      es: "“Antes de diseñar dashboards fue necesario diseñar un lenguaje compartido.”",
+      en: "“Before designing dashboards, a shared language had to be designed.”",
+    } as L,
+  },
+  singleReading: {
+    label: {
+      es: "Una única lectura para toda la organización",
+      en: "A single reading for the whole organization",
+    } as L,
+    p: {
+      es: [
+        "A partir de esa alineación diseñé una arquitectura que permitía comenzar con una visión ejecutiva regional y profundizar progresivamente mediante drill-down hasta el detalle operativo.",
+        "La información dejó de organizarse por áreas internas y comenzó a organizarse según las preguntas que necesitaban responder quienes tomaban decisiones.",
+        "El resultado fue una experiencia capaz de conectar el negocio físico y digital bajo un mismo marco analítico.",
+      ],
+      en: [
+        "From that alignment I designed an architecture that started with a regional executive view and drilled progressively down to operational detail.",
+        "Information stopped being organized by internal teams and started being organized around the questions decision makers needed to answer.",
+        "The result was an experience able to connect the physical and digital business under one analytical framework.",
+      ],
+    } as LArr,
+    diagramAlt: {
+      es: "Diagrama: canal físico más canal digital convergen en un lenguaje compartido y una visión omnicanal",
+      en: "Diagram: physical and digital channels converge into a shared language and an omnichannel view",
+    } as L,
+  },
+  dashboard: {
+    title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
+    alt: {
+      es: "Dashboard ejecutivo con venta neta, cumplimiento y conversión comparados entre once países",
+      en: "Executive dashboard comparing net sales, target compliance and conversion across eleven countries",
+    } as L,
+    caption: {
+      es: "Dashboard ejecutivo diseñado para analizar el desempeño comercial de once países mediante una estructura analítica común.",
+      en: "Executive dashboard designed to analyze commercial performance across eleven countries through a common analytical structure.",
+    } as L,
+  },
+  impact: {
+    label: { es: "Impacto", en: "Impact" } as L,
+    p: {
+      es: [
+        "Plataforma analítica para once países.",
+        "USD 65.6 millones analizados.",
+        "Ocho indicadores comerciales estandarizados.",
+        "Comparaciones consistentes entre canales físicos y digitales.",
+        "Navegación jerárquica desde nivel regional hasta detalle operativo.",
+        "Reuniones semanales de validación durante todo el proceso de diseño.",
+      ],
+      en: [
+        "Analytics platform for eleven countries.",
+        "USD 65.6 million analyzed.",
+        "Eight standardized commercial indicators.",
+        "Consistent comparisons between physical and digital channels.",
+        "Hierarchical navigation from regional level to operational detail.",
+        "Weekly validation meetings throughout the design process.",
+      ],
+    } as LArr,
+    alt: {
+      es: "Métricas de impacto: 11 países, USD 65.6M analizados y 8 KPIs estandarizados",
+      en: "Impact metrics: 11 countries, USD 65.6M analyzed and 8 standardized KPIs",
+    } as L,
+  },
+  reflection: {
+    label: { es: "Reflexión", en: "Reflection" } as L,
+    quote: {
+      es: "La tecnología no era el principal desafío. Lo complejo era lograr que personas con modelos mentales diferentes confiaran en una misma interpretación del negocio. Diseñar también significa crear un lenguaje compartido.",
+      en: "Technology was not the main challenge. The hard part was getting people with different mental models to trust one shared interpretation of the business. Designing also means creating a shared language.",
+    } as L,
+  },
+};
