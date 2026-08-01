@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
+import { CaseTwoBody } from "@/components/case-two";
 import { caseStudies, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -46,6 +47,7 @@ function CasePage() {
   const study = caseStudies.find((c) => c.slug === slug)!;
   const next = caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length];
   const isCaseOne = study.slug === "datos-fragmentados-decisiones-confiables";
+  const isCaseTwo = study.slug === "una-empresa-dos-idiomas";
 
   return (
     <article className="mx-auto max-w-6xl px-6">
@@ -70,6 +72,18 @@ function CasePage() {
               plataforma analítica para la toma de decisiones.
             </p>
           </div>
+        ) : isCaseTwo ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              La organización tenía acceso a la misma información. Lo que no compartía era la misma
+              manera de interpretarla.
+            </p>
+            <p>
+              Mientras el negocio digital hablaba de órdenes, el negocio físico hablaba de
+              transacciones. Ambos describían prácticamente el mismo comportamiento comercial, pero
+              utilizaban lenguajes diferentes para tomar decisiones.
+            </p>
+          </div>
         ) : (
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
@@ -88,6 +102,8 @@ function CasePage() {
 
       {isCaseOne ? (
         <CaseOneBody />
+      ) : isCaseTwo ? (
+        <CaseTwoBody />
       ) : (
         <>
           <Section label={t(work.sections.context)}>
