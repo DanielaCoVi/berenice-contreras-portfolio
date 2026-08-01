@@ -102,6 +102,8 @@ function CasePage() {
 
       {isCaseOne ? (
         <CaseOneBody />
+      ) : isCaseTwo ? (
+        <CaseTwoBody />
       ) : (
         <>
           <Section label={t(work.sections.context)}>
