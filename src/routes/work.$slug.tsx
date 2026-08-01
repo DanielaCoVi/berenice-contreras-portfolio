@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
 import { CaseTwoBody } from "@/components/case-two";
-import { caseStudies, work } from "@/lib/content";
+import { caseOne, caseStudies, caseTwo, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
 
