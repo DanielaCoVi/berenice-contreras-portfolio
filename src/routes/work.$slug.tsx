@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
+import { CaseTwoBody } from "@/components/case-two";
 import { caseStudies, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -46,6 +47,7 @@ function CasePage() {
   const study = caseStudies.find((c) => c.slug === slug)!;
   const next = caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length];
   const isCaseOne = study.slug === "datos-fragmentados-decisiones-confiables";
+  const isCaseTwo = study.slug === "una-empresa-dos-idiomas";
 
   return (
     <article className="mx-auto max-w-6xl px-6">
