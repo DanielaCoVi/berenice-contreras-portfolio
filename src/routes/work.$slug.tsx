@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
 import { CaseTwoBody } from "@/components/case-two";
-import { caseStudies, work } from "@/lib/content";
+import { caseOne, caseStudies, caseTwo, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
 
@@ -63,32 +63,22 @@ function CasePage() {
         <h1 className="display mt-5 max-w-4xl text-[2.4rem] sm:text-6xl">{t(study.title)}</h1>
         {isCaseOne ? (
           <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              La organización había crecido de 10 a 25 sedes, pero seguía tomando decisiones a partir
-              de múltiples fuentes de información inconsistentes.
-            </p>
-            <p>
-              Mi trabajo consistió en transformar cinco sistemas desconectados en una única
-              plataforma analítica para la toma de decisiones.
-            </p>
+            {tl(caseOne.hero).map((p) => (
+              <p key={p}>{p}</p>
+            ))}
           </div>
         ) : isCaseTwo ? (
           <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              La organización tenía acceso a la misma información. Lo que no compartía era la misma
-              manera de interpretarla.
-            </p>
-            <p>
-              Mientras el negocio digital hablaba de órdenes, el negocio físico hablaba de
-              transacciones. Ambos describían prácticamente el mismo comportamiento comercial, pero
-              utilizaban lenguajes diferentes para tomar decisiones.
-            </p>
+            {tl(caseTwo.hero).map((p) => (
+              <p key={p}>{p}</p>
+            ))}
           </div>
         ) : (
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
           </p>
         )}
+
         <div className="mt-14 overflow-hidden rounded-2xl border border-border">
           <img
             src={study.cover}
