@@ -72,6 +72,18 @@ function CasePage() {
               plataforma analítica para la toma de decisiones.
             </p>
           </div>
+        ) : isCaseTwo ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              La organización tenía acceso a la misma información. Lo que no compartía era la misma
+              manera de interpretarla.
+            </p>
+            <p>
+              Mientras el negocio digital hablaba de órdenes, el negocio físico hablaba de
+              transacciones. Ambos describían prácticamente el mismo comportamiento comercial, pero
+              utilizaban lenguajes diferentes para tomar decisiones.
+            </p>
+          </div>
         ) : (
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
