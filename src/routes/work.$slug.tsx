@@ -105,7 +105,10 @@ function CasePage() {
         <CaseOneBody />
       ) : isCaseTwo ? (
         <CaseTwoBody />
+      ) : isCaseThree ? (
+        <CaseThreeBody />
       ) : (
+
         <>
           <Section label={t(work.sections.context)}>
             <p className="text-lg leading-relaxed text-muted-foreground">{t(study.context)}</p>
