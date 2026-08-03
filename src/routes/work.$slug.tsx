@@ -3,8 +3,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
 import { CaseTwoBody } from "@/components/case-two";
-import { caseOne, caseStudies, caseTwo, work } from "@/lib/content";
+import { CaseThreeBody } from "@/components/case-three";
+import { caseOne, caseStudies, caseThree, caseTwo, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
+
 
 
 export const Route = createFileRoute("/work/$slug")({
