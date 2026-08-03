@@ -50,6 +50,8 @@ function CasePage() {
   const next = caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length];
   const isCaseOne = study.slug === "datos-fragmentados-decisiones-confiables";
   const isCaseTwo = study.slug === "una-empresa-dos-idiomas";
+  const isCaseThree = study.slug === "lo-que-las-encuestas-nunca-mostraron";
+
 
   return (
     <article className="mx-auto max-w-6xl px-6">
