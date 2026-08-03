@@ -53,6 +53,8 @@ function CasePage() {
   const isCaseOne = study.slug === "datos-fragmentados-decisiones-confiables";
   const isCaseTwo = study.slug === "una-empresa-dos-idiomas";
   const isCaseThree = study.slug === "lo-que-las-encuestas-nunca-mostraron";
+  const isCaseFour = study.slug === "negocio-sin-dependencia-de-una-persona";
+
 
 
   return (
@@ -85,7 +87,14 @@ function CasePage() {
               <p key={p}>{p}</p>
             ))}
           </div>
+        ) : isCaseFour ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            {tl(caseFour.hero).map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
         ) : (
+
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
@@ -109,7 +118,10 @@ function CasePage() {
         <CaseTwoBody />
       ) : isCaseThree ? (
         <CaseThreeBody />
+      ) : isCaseFour ? (
+        <CaseFourBody />
       ) : (
+
 
         <>
           <Section label={t(work.sections.context)}>
