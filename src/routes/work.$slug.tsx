@@ -77,7 +77,14 @@ function CasePage() {
               <p key={p}>{p}</p>
             ))}
           </div>
+        ) : isCaseThree ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            {tl(caseThree.hero).map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
         ) : (
+
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
           </p>
