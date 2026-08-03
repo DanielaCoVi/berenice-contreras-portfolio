@@ -3,8 +3,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { CaseOneBody } from "@/components/case-one";
 import { CaseTwoBody } from "@/components/case-two";
-import { caseOne, caseStudies, caseTwo, work } from "@/lib/content";
+import { CaseThreeBody } from "@/components/case-three";
+import { caseOne, caseStudies, caseThree, caseTwo, work } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
+
 
 
 export const Route = createFileRoute("/work/$slug")({
@@ -48,6 +50,8 @@ function CasePage() {
   const next = caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length];
   const isCaseOne = study.slug === "datos-fragmentados-decisiones-confiables";
   const isCaseTwo = study.slug === "una-empresa-dos-idiomas";
+  const isCaseThree = study.slug === "lo-que-las-encuestas-nunca-mostraron";
+
 
   return (
     <article className="mx-auto max-w-6xl px-6">
@@ -73,7 +77,14 @@ function CasePage() {
               <p key={p}>{p}</p>
             ))}
           </div>
+        ) : isCaseThree ? (
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+            {tl(caseThree.hero).map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
         ) : (
+
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t(study.summary)}
           </p>
@@ -94,7 +105,10 @@ function CasePage() {
         <CaseOneBody />
       ) : isCaseTwo ? (
         <CaseTwoBody />
+      ) : isCaseThree ? (
+        <CaseThreeBody />
       ) : (
+
         <>
           <Section label={t(work.sections.context)}>
             <p className="text-lg leading-relaxed text-muted-foreground">{t(study.context)}</p>

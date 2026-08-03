@@ -231,7 +231,11 @@ export const caseStudies: CaseStudy[] = [
       es: "Lo que las encuestas nunca mostraron",
       en: "What the surveys never showed",
     },
-    meta: { es: "CRM de Cobranza · 2021", en: "Collections CRM · 2021" },
+    meta: {
+      es: "Los Portales · CRM de Cobranza · 2021",
+      en: "Los Portales · Collections CRM · 2021",
+    },
+
     summary: {
       es: "Los usuarios afirmaban estar satisfechos con el sistema. La investigación reveló años de adaptación a procesos ineficientes que nadie estaba cuestionando.",
       en: "Satisfaction indicators said one thing and operational behavior another. Field research redefined the problem.",
@@ -650,6 +654,146 @@ export const caseTwo = {
     quote: {
       es: "La tecnología no era el principal desafío. Lo complejo era lograr que personas con modelos mentales diferentes confiaran en una misma interpretación del negocio. Diseñar también significa crear un lenguaje compartido.",
       en: "Technology was not the main challenge. The hard part was getting people with different mental models to trust one shared interpretation of the business. Designing also means creating a shared language.",
+    } as L,
+  },
+};
+
+export const caseThree = {
+  hero: {
+    es: [
+      "Las encuestas decían que el sistema funcionaba. Las entrevistas demostraron exactamente lo contrario.",
+    ],
+    en: [
+      "The surveys said the system worked. The interviews proved exactly the opposite.",
+    ],
+  } as LArr,
+  friction: {
+    label: {
+      es: "Una operación acostumbrada a la fricción",
+      en: "An operation used to friction",
+    } as L,
+    p: {
+      es: [
+        "El CRM llevaba años siendo utilizado por toda el área de cobranzas. Los usuarios calificaban positivamente la herramienta.",
+        "Sin embargo, durante las entrevistas comenzaron a aparecer frases repetidas: “Ya nos acostumbramos.” “Siempre fue así.” “No queda otra.”",
+        "La satisfacción no reflejaba una buena experiencia. Reflejaba años de adaptación.",
+      ],
+      en: [
+        "The CRM had been used by the entire collections area for years. Users rated the tool positively.",
+        "During the interviews, however, the same phrases kept coming up: “We got used to it.” “It was always like this.” “There is no other option.”",
+        "Satisfaction did not reflect a good experience. It reflected years of adaptation.",
+      ],
+    } as LArr,
+  },
+  operation: {
+    label: { es: "Entrando a la operación", en: "Stepping into the operation" } as L,
+    p: {
+      es: [
+        "Entrevisté gestores, ejecutivos, supervisores y coordinadores de cobranzas. Observé jornadas donde algunos agentes realizaban entre 170 y 180 llamadas diarias.",
+        "En ese contexto, cada clic adicional multiplicaba el tiempo perdido.",
+        "Los usuarios necesitaban cambiar constantemente entre pantallas para consultar historial, registrar gestiones y validar información que además podía encontrarse desactualizada porque el sistema sincronizaba pagos solo una vez al día.",
+      ],
+      en: [
+        "I interviewed collection agents, executives, supervisors and coordinators. I observed shifts where some agents made between 170 and 180 calls a day.",
+        "In that context, every extra click multiplied the time lost.",
+        "Users had to switch constantly between screens to check history, log activity and validate information that could also be out of date, because the system synced payments only once a day.",
+      ],
+    } as LArr,
+    quote: {
+      es: "“El problema nunca fue la interfaz. Era el flujo completo.”",
+      en: "“The problem was never the interface. It was the whole flow.”",
+    } as L,
+    personaAlt: {
+      es: "Perfil de usuario: gestora de cobranza con objetivos y frustraciones operativas",
+      en: "User persona: collections agent with operational goals and frustrations",
+    } as L,
+    personaCaption: {
+      es: "Perfil representativo utilizado para comprender objetivos, frustraciones y contexto operativo de los gestores.",
+      en: "Representative persona used to understand the goals, frustrations and operational context of collection agents.",
+    } as L,
+    insightsAlt: {
+      es: "Cuatro hallazgos clave de la investigación con usuarios",
+      en: "Four key insights from the user research",
+    } as L,
+    insightsCaption: {
+      es: "Los hallazgos de investigación revelaron fricciones normalizadas que no aparecían en los indicadores cuantitativos.",
+      en: "Research findings revealed normalized friction that never appeared in quantitative indicators.",
+    } as L,
+  },
+  realWork: {
+    label: {
+      es: "Diseñando alrededor del trabajo real",
+      en: "Designing around the real work",
+    } as L,
+    p: {
+      es: [
+        "Rediseñé el recorrido principal tomando como referencia la forma en que los gestores trabajaban realmente y no la estructura heredada del sistema.",
+        "Consolidé información en una única vista. Incorporé indicadores de avance hacia objetivos de cobranza. Diseñé un ranking para seguimiento del desempeño.",
+        "Construí una ficha única del cliente que eliminó gran parte de la navegación innecesaria. El flujo principal pasó de doce pasos a seis.",
+      ],
+      en: [
+        "I redesigned the core journey around how agents actually worked, not around the structure inherited from the system.",
+        "I consolidated information into a single view. I added progress indicators towards collection targets. I designed a ranking to track performance.",
+        "I built a single customer record that removed most of the unnecessary navigation. The main flow went from twelve steps to six.",
+      ],
+    } as LArr,
+    flowFrom: { es: "12 pasos", en: "12 steps" } as L,
+    flowTo: { es: "6 pasos", en: "6 steps" } as L,
+    flowResult: { es: "50% menos fricción", en: "50% less friction" } as L,
+    homeAlt: {
+      es: "Pantalla de inicio del CRM con asignación del día, compromisos y lista de tareas",
+      en: "CRM home screen with daily assignment, commitments and task list",
+    } as L,
+    homeCaption: {
+      es: "Centro de control operativo diseñado para consolidar tareas, compromisos y acciones frecuentes dentro de una única vista.",
+      en: "Operational control center designed to consolidate tasks, commitments and frequent actions in a single view.",
+    } as L,
+    fichaAlt: {
+      es: "Ficha de gestión del cliente con historial, datos financieros y registro de acciones",
+      en: "Customer record with history, financial data and activity logging",
+    } as L,
+    fichaCaption: {
+      es: "Ficha única del cliente que reunió historial, información financiera y acciones operativas en una sola pantalla.",
+      en: "Single customer record bringing history, financial information and operational actions into one screen.",
+    } as L,
+    progresoAlt: {
+      es: "Dashboard de progreso con metas, ranking de gestores y evolución del mes",
+      en: "Progress dashboard with targets, agent ranking and monthly evolution",
+    } as L,
+    progresoCaption: {
+      es: "Visualización del avance diario, métricas de desempeño y seguimiento de objetivos.",
+      en: "Visualization of daily progress, performance metrics and goal tracking.",
+    } as L,
+  },
+  impact: {
+    label: { es: "Impacto", en: "Impact" } as L,
+    p: {
+      es: [
+        "Flujo reducido de doce pasos a seis.",
+        "Investigación con usuarios de todos los niveles operativos.",
+        "Validación positiva con usuarios expertos.",
+        "Menor carga cognitiva para nuevos colaboradores.",
+        "Información reorganizada alrededor del proceso de trabajo y no de la estructura del sistema.",
+      ],
+      en: [
+        "Main flow reduced from twelve steps to six.",
+        "Research with users across every operational level.",
+        "Positive validation with expert users.",
+        "Lower cognitive load for new hires.",
+        "Information reorganized around the work process instead of the system structure.",
+      ],
+    } as LArr,
+    metrics: [
+      { value: "50%", label: { es: "Menos pasos operativos", en: "Fewer operational steps" } as L },
+      { value: "30+", label: { es: "Usuarios investigados", en: "Users researched" } as L },
+      { value: "100%", label: { es: "Validación positiva", en: "Positive validation" } as L },
+    ],
+  },
+  reflection: {
+    label: { es: "Reflexión", en: "Reflection" } as L,
+    quote: {
+      es: "Las personas pueden convivir durante años con procesos ineficientes. La investigación permite descubrir problemas que los indicadores cuantitativos nunca llegan a mostrar.",
+      en: "People can live with inefficient processes for years. Research uncovers problems that quantitative indicators never manage to show.",
     } as L,
   },
 };
