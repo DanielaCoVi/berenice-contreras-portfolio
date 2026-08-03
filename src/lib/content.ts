@@ -231,7 +231,11 @@ export const caseStudies: CaseStudy[] = [
       es: "Lo que las encuestas nunca mostraron",
       en: "What the surveys never showed",
     },
-    meta: { es: "CRM de Cobranza · 2021", en: "Collections CRM · 2021" },
+    meta: {
+      es: "Los Portales · CRM de Cobranza · 2021",
+      en: "Los Portales · Collections CRM · 2021",
+    },
+
     summary: {
       es: "Los usuarios afirmaban estar satisfechos con el sistema. La investigación reveló años de adaptación a procesos ineficientes que nadie estaba cuestionando.",
       en: "Satisfaction indicators said one thing and operational behavior another. Field research redefined the problem.",
