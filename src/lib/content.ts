@@ -261,7 +261,7 @@ export const caseStudies: CaseStudy[] = [
       es: "Diseñar para que un negocio deje de depender de una sola persona",
       en: "Designing a business out of single-person dependency",
     },
-    meta: { es: "Plataforma Operativa Interna · 2021", en: "Internal Operations Platform · 2021" },
+    meta: { es: "Guilt Free · Plataforma Operativa Interna · 2021", en: "Guilt Free · Internal Operations Platform · 2021" },
     summary: {
       es: "Una operación que dependía completamente de su fundadora. La solución transformó conocimiento individual en procesos escalables y compartidos.",
       en: "Critical knowledge lived in one person's head. The system had to make it explicit, transferable and auditable.",
@@ -794,6 +794,191 @@ export const caseThree = {
     quote: {
       es: "Las personas pueden convivir durante años con procesos ineficientes. La investigación permite descubrir problemas que los indicadores cuantitativos nunca llegan a mostrar.",
       en: "People can live with inefficient processes for years. Research uncovers problems that quantitative indicators never manage to show.",
+    } as L,
+  },
+};
+
+export const caseFour = {
+  hero: {
+    es: [
+      "Cada mañana, antes de comenzar la producción, todo el equipo esperaba a que la fundadora indicara cuánto debía prepararse.",
+      "Mientras el negocio crecía, esa dependencia se convertía en su principal límite para escalar.",
+    ],
+    en: [
+      "Every morning, before production started, the whole team waited for the founder to tell them how much to prepare.",
+      "As the business grew, that dependency became its main limit to scale.",
+    ],
+  } as LArr,
+  knowledge: {
+    label: {
+      es: "Cuando el conocimiento vive en una sola persona",
+      en: "When knowledge lives in a single person",
+    } as L,
+    p: {
+      es: [
+        "La operación funcionaba gracias a múltiples hojas de cálculo, cálculos manuales y conocimiento acumulado por la fundadora.",
+        "El equipo de producción necesitaba consultarla constantemente para saber cuánta materia prima utilizar, cuánto inventario quedaba disponible y qué ingredientes debían reponerse.",
+        "El verdadero cuello de botella no era el inventario. Era la concentración del conocimiento.",
+      ],
+      en: [
+        "The operation ran on multiple spreadsheets, manual calculations and knowledge accumulated by the founder.",
+        "The production team had to ask her constantly how much raw material to use, how much inventory was left and which ingredients needed restocking.",
+        "The real bottleneck was never inventory. It was the concentration of knowledge.",
+      ],
+    } as LArr,
+    entrevistasAlt: {
+      es: "Resumen de entrevistas con el equipo y stakeholders",
+      en: "Summary of interviews with the team and stakeholders",
+    } as L,
+    entrevistasCaption: {
+      es: "Investigación realizada con stakeholders y usuarios operativos para comprender la dependencia existente en los procesos diarios.",
+      en: "Research with stakeholders and operational users to understand the dependency embedded in daily processes.",
+    } as L,
+    problemaAlt: {
+      es: "Definición del problema y síntesis de hallazgos",
+      en: "Problem definition and synthesis of findings",
+    } as L,
+    problemaCaption: {
+      es: "Síntesis de los problemas operativos identificados durante la fase de descubrimiento.",
+      en: "Synthesis of the operational problems identified during discovery.",
+    } as L,
+    inventarioAlt: {
+      es: "Análisis de inventario real versus ideal",
+      en: "Analysis of actual versus ideal inventory",
+    } as L,
+    inventarioCaption: {
+      es: "Análisis del estado actual del inventario y oportunidades para construir procesos más confiables y escalables.",
+      en: "Analysis of the current inventory state and opportunities to build more reliable, scalable processes.",
+    } as L,
+    blueprintAlt: {
+      es: "Service Blueprint del proceso de inventario",
+      en: "Service Blueprint of the inventory process",
+    } as L,
+    blueprintCaption: {
+      es: "Service Blueprint utilizado para identificar puntos de fricción, dependencias críticas y diseñar una operación futura más sostenible.",
+      en: "Service Blueprint used to identify friction points, critical dependencies and design a more sustainable future operation.",
+    } as L,
+  },
+  people: {
+    label: {
+      es: "Diseñar para personas, no para expertos en tecnología",
+      en: "Designing for people, not for technology experts",
+    } as L,
+    p: {
+      es: [
+        "Las entrevistas mostraron otra condición importante. Los usuarios de producción tenían poca experiencia utilizando herramientas digitales.",
+        "Cada decisión de diseño buscó reducir la carga cognitiva, eliminar pasos innecesarios y mantener una interacción intuitiva incluso para personas con escasa familiaridad tecnológica.",
+      ],
+      en: [
+        "The interviews revealed another important condition. Production users had little experience with digital tools.",
+        "Every design decision aimed to reduce cognitive load, remove unnecessary steps and keep the interaction intuitive even for people with little technical familiarity.",
+      ],
+    } as LArr,
+    quote: {
+      es: "“La solución debía ser extremadamente sencilla.”",
+      en: "“The solution had to be extremely simple.”",
+    } as L,
+    personaAlt: {
+      es: "User persona de una colaboradora del equipo operativo",
+      en: "User persona of a member of the operations team",
+    } as L,
+    personaCaption: {
+      es: "Perfil representativo utilizado para comprender objetivos, necesidades y limitaciones de los usuarios operativos.",
+      en: "Representative persona used to understand the goals, needs and limitations of operational users.",
+    } as L,
+  },
+  autonomy: {
+    label: {
+      es: "Construyendo una operación más autónoma",
+      en: "Building a more autonomous operation",
+    } as L,
+    p: {
+      es: [
+        "Diseñé una plataforma interna que integró inventario, producción y abastecimiento en un único sistema.",
+        "Los colaboradores podían registrar ingresos de materia prima, registrar salidas tanto por producción como por consumo individual, calcular automáticamente la cantidad de ingredientes necesaria para la producción diaria y visualizar el estado del inventario mediante indicadores tipo semáforo que facilitaban la reposición oportuna.",
+        "El objetivo nunca fue digitalizar hojas de cálculo. Fue distribuir el conocimiento operativo para que el negocio pudiera crecer sin depender constantemente de una sola persona.",
+      ],
+      en: [
+        "I designed an internal platform that integrated inventory, production and supply into a single system.",
+        "Team members could register incoming raw material, log outflows for both production and individual consumption, automatically calculate the ingredients needed for daily production and see inventory status through traffic-light indicators that made timely restocking easier.",
+        "The goal was never to digitize spreadsheets. It was to distribute operational knowledge so the business could grow without constantly depending on one person.",
+      ],
+    } as LArr,
+    mapaAlt: {
+      es: "Mapa de sitio de la plataforma operativa interna",
+      en: "Site map of the internal operations platform",
+    } as L,
+    mapaCaption: {
+      es: "Arquitectura de información diseñada para conectar inventario, producción, abastecimiento y ventas dentro de una experiencia coherente.",
+      en: "Information architecture designed to connect inventory, production, supply and sales within one coherent experience.",
+    } as L,
+    viewsAlt: {
+      es: "Vista general del dashboard de la plataforma",
+      en: "Overview of the platform dashboard",
+    } as L,
+    viewsCaption: {
+      es: "Vista general de la plataforma mostrando la integración entre dashboard, inventario, ventas, recetario y productos.",
+      en: "Platform overview showing the integration between dashboard, inventory, sales, recipe book and products.",
+    } as L,
+    entradaAlt: {
+      es: "Flujo de registro de entrada de inventario",
+      en: "Inventory entry registration flow",
+    } as L,
+    entradaCaption: {
+      es: "Flujo de registro de inventario diseñado para mejorar control, trazabilidad y reposición de insumos.",
+      en: "Inventory registration flow designed to improve control, traceability and restocking of supplies.",
+    } as L,
+    recetarioAlt: {
+      es: "Recetario digital con cálculo de materia prima",
+      en: "Digital recipe book with raw material calculation",
+    } as L,
+    recetarioCaption: {
+      es: "Recetario digital utilizado para automatizar cálculos de materia prima y estandarizar la producción diaria.",
+      en: "Digital recipe book used to automate raw material calculations and standardize daily production.",
+    } as L,
+    flowFrom: { es: "Hojas de cálculo", en: "Spreadsheets" } as L,
+    flowMid: { es: "Procesos estandarizados", en: "Standardized Processes" } as L,
+    flowTo: { es: "Operación autónoma", en: "Autonomous Operations" } as L,
+    testingAlt: {
+      es: "Sesiones de testing con usuarios reales",
+      en: "Testing sessions with real users",
+    } as L,
+    testingCaption: {
+      es: "Validación de la solución con usuarios reales para asegurar comprensión, adopción y facilidad de uso.",
+      en: "Validation with real users to ensure comprehension, adoption and ease of use.",
+    } as L,
+  },
+  impact: {
+    label: { es: "Impacto", en: "Impact" } as L,
+    p: {
+      es: [
+        "Centralización de inventario, producción y abastecimiento.",
+        "Automatización del cálculo diario de materia prima.",
+        "Mayor autonomía para el equipo de producción.",
+        "Disminución de la dependencia operativa hacia la fundadora.",
+        "Procesos manuales convertidos en flujos estandarizados.",
+        "Solución validada y aprobada por los usuarios finales.",
+      ],
+      en: [
+        "Inventory, production and supply centralized.",
+        "Daily raw material calculation automated.",
+        "Greater autonomy for the production team.",
+        "Reduced operational dependency on the founder.",
+        "Manual processes turned into standardized flows.",
+        "Solution validated and approved by end users.",
+      ],
+    } as LArr,
+    metrics: [
+      { value: "1", label: { es: "Sistema integrado", en: "Integrated system" } as L },
+      { value: "100%", label: { es: "Cálculo automatizado", en: "Automated calculation" } as L },
+      { value: "Mayor", label: { es: "Autonomía operativa", en: "Operational autonomy" } as L },
+    ],
+  },
+  reflection: {
+    label: { es: "Reflexión", en: "Reflection" } as L,
+    quote: {
+      es: "La escalabilidad no siempre comienza incorporando más tecnología. Muchas veces comienza transformando conocimiento individual en procesos compartidos.",
+      en: "Scalability does not always start by adding more technology. Often it starts by turning individual knowledge into shared processes.",
     } as L,
   },
 };
