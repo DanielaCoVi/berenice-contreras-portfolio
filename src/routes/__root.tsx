@@ -137,6 +137,7 @@ function RootComponent() {
               <Outlet />
             </main>
             <SiteFooter />
+            <BackToTop />
           </div>
         </I18nProvider>
       </ThemeProvider>
