@@ -49,14 +49,36 @@ export const home = {
     es: "Cuatro casos donde ayudé a organizaciones a alinear datos, procesos y personas para tomar mejores decisiones.",
     en: "Four cases where I helped organizations align data, processes and people to make better decisions.",
   } as L,
-  capabilitiesLabel: { es: "Capacidades", en: "Capabilities" } as L,
-  capabilities: [
-    "Enterprise UX",
-    "Analytics Products",
-    "Information Architecture",
-    "Product Strategy",
-    "Service Design",
-    "Data Product Design",
+  approachLabel: { es: "Cómo genero impacto", en: "How I create impact" } as L,
+  approach: [
+    {
+      title: { es: "Comprender antes de construir", en: "Understand before building" } as L,
+      text: {
+        es: "Reconstruyo el contexto operativo, identifico dependencias y valido cómo funciona realmente el negocio antes de proponer soluciones.",
+        en: "I rebuild the operational context, map dependencies and validate how the business really works before proposing solutions.",
+      } as L,
+    },
+    {
+      title: { es: "Alinear perspectivas", en: "Align perspectives" } as L,
+      text: {
+        es: "Trabajo en la intersección entre negocio, datos y experiencia para construir una interpretación compartida de la realidad.",
+        en: "I work at the intersection of business, data and experience to build a shared interpretation of reality.",
+      } as L,
+    },
+    {
+      title: { es: "Diseñar sistemas", en: "Design systems" } as L,
+      text: {
+        es: "Pienso en procesos, información y decisiones como partes de un mismo sistema, no como funcionalidades aisladas.",
+        en: "I think of processes, information and decisions as parts of one system, not isolated features.",
+      } as L,
+    },
+    {
+      title: { es: "Reducir incertidumbre", en: "Reduce uncertainty" } as L,
+      text: {
+        es: "Transformo complejidad operativa en estructuras que permitan tomar decisiones con mayor claridad y confianza.",
+        en: "I turn operational complexity into structures that enable clearer, more confident decisions.",
+      } as L,
+    },
   ],
   aboutTitle: { es: "Sobre mí", en: "About" } as L,
   aboutText: {

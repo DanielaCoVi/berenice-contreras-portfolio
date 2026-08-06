@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { nav, site, ui } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
@@ -11,23 +11,39 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6">
-        <Link to="/" className="display text-xl tracking-tight" onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          className="brand-mark text-2xl font-medium sm:text-[1.65rem]"
+          onClick={() => setOpen(false)}
+        >
           {site.name}
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {nav.slice(1).map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              className="group relative py-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "text-primary" }}
             >
-              {t(item.label)}
+              <span className="relative">
+                {t(item.label)}
+                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100 group-data-[status=active]:scale-x-100" />
+              </span>
             </Link>
           ))}
+          <a
+            href={site.cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded-md border border-border px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+          >
+            CV
+            <ArrowUpRight className="size-3.5" />
+          </a>
         </nav>
 
         <div className="flex items-center gap-1">
@@ -81,13 +97,25 @@ export function SiteHeader() {
                 <Link
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
-                  activeProps={{ className: "text-foreground" }}
+                  className="flex items-center gap-3 border-l-2 border-transparent py-2 pl-3 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  activeProps={{ className: "border-primary text-primary" }}
                 >
                   {t(item.label)}
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={site.cv}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-1 border-l-2 border-transparent py-2 pl-3 text-base font-medium text-foreground"
+              >
+                CV
+                <ArrowUpRight className="size-4" />
+              </a>
+            </li>
           </ul>
         </nav>
       )}

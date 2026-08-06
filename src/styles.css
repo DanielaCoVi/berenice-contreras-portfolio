@@ -55,8 +55,8 @@
   --card-foreground: oklch(0.968 0 0);
   --popover: oklch(0.213 0.012 254.5);
   --popover-foreground: oklch(0.968 0 0);
-  --primary: oklch(0.615 0.146 55.7); /* #D4770A */
-  --primary-hover: oklch(0.687 0.144 60.5); /* #E38A1F */
+  --primary: #f39b32;
+  --primary-hover: #ffb357;
   --primary-foreground: oklch(0.166 0.011 249.5);
   --secondary: oklch(0.245 0.012 254.5);
   --secondary-foreground: oklch(0.968 0 0);
@@ -67,7 +67,7 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.272 0.008 258); /* #23262A */
   --input: oklch(0.272 0.008 258);
-  --ring: oklch(0.615 0.146 55.7);
+  --ring: #f39b32;
 }
 
 .light {
@@ -79,9 +79,9 @@
   --card-foreground: oklch(0.208 0.026 264.1);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.208 0.026 264.1);
-  --primary: oklch(0.615 0.146 55.7);
-  --primary-hover: oklch(0.687 0.144 60.5);
-  --primary-foreground: oklch(1 0 0);
+  --primary: #e2860f;
+  --primary-hover: #f39b32;
+  --primary-foreground: oklch(0.166 0.011 249.5);
   --secondary: oklch(0.965 0.004 106.4);
   --secondary-foreground: oklch(0.208 0.026 264.1);
   --muted: oklch(0.965 0.004 106.4);
@@ -89,7 +89,7 @@
   --accent-foreground: oklch(0.208 0.026 264.1);
   --border: oklch(0.907 0.004 106.4);
   --input: oklch(0.907 0.004 106.4);
-  --ring: oklch(0.615 0.146 55.7);
+  --ring: #e2860f;
 }
 
 @layer base {
@@ -137,4 +137,48 @@
 
 @utility rule-top {
   border-top: 1px solid var(--color-border);
+}
+
+@utility cta-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    transform: scale(1.03);
+    box-shadow: 0 10px 34px -8px color-mix(in oklab, var(--color-primary) 55%, transparent);
+  }
+}
+
+@utility cta-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 60%, var(--color-border));
+    background-color: color-mix(in oklab, var(--color-primary) 10%, var(--color-surface));
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px -12px color-mix(in oklab, var(--color-foreground) 30%, transparent);
+  }
+}
+
+@utility brand-mark {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  letter-spacing: -0.015em;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
 }

@@ -31,33 +31,36 @@ function Index() {
   return (
     <div className="mx-auto max-w-6xl px-6">
       {/* Hero */}
-      <section className="grid gap-10 py-24 md:grid-cols-12 md:py-36">
-        <div className="md:col-span-9">
+      <section className="grid gap-10 py-28 md:grid-cols-12 md:py-44">
+        <div className="md:col-span-10">
           <Reveal>
             <p className="eyebrow">Senior Product Designer · Latam</p>
           </Reveal>
-          <Reveal delay={0.08}>
-            <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-7xl">
+          <Reveal delay={0.1}>
+            <h1 className="display mt-8 text-[2.8rem] leading-[1.02] sm:text-6xl lg:text-[5.25rem]">
               {t(home.heroTitle)}
             </h1>
           </Reveal>
-          <Reveal delay={0.16}>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              {t(home.heroText)}
-            </p>
+          <Reveal delay={0.2}>
+            <div className="mt-10 flex max-w-2xl gap-6">
+              <span aria-hidden className="mt-1 h-16 w-px shrink-0 bg-primary/70" />
+              <p className="text-lg leading-[1.75] text-muted-foreground sm:text-xl">
+                {t(home.heroText)}
+              </p>
+            </div>
           </Reveal>
-          <Reveal delay={0.24}>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+          <Reveal delay={0.32}>
+            <div className="mt-14 flex flex-wrap items-center gap-3">
               <Link
                 to="/work"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+                className="cta-primary inline-flex items-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold"
               >
                 {t(home.ctaPrimary)}
                 <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface"
+                className="cta-secondary inline-flex items-center rounded-md px-6 py-3.5 text-sm font-medium"
               >
                 {t(home.ctaSecondary)}
               </Link>
@@ -93,23 +96,26 @@ function Index() {
         </div>
       </section>
 
-      {/* Capacidades */}
-      <section className="rule-top py-20">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <h2 className="display text-3xl sm:text-4xl">{t(home.capabilitiesLabel)}</h2>
-          </div>
-          <ul className="grid gap-x-8 gap-y-4 md:col-span-8 sm:grid-cols-2">
-            {home.capabilities.map((c, i) => (
-              <Reveal as="li" key={c} delay={i * 0.04}>
-                <span className="block border-b border-border py-3 text-lg text-foreground">
-                  {c}
+      {/* Cómo genero impacto */}
+      <section className="rule-top py-24">
+        <h2 className="display text-3xl sm:text-4xl">{t(home.approachLabel)}</h2>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+          {home.approach.map((item, i) => (
+            <Reveal as="article" key={item.title.es} delay={i * 0.06}>
+              <div className="group h-full rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_18px_50px_-24px_var(--color-primary)]">
+                <span className="text-xs font-semibold tabular-nums text-primary">
+                  0{i + 1}
                 </span>
-              </Reveal>
-            ))}
-          </ul>
+                <h3 className="display mt-4 text-2xl text-foreground">{t(item.title)}</h3>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  {t(item.text)}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
+
 
       {/* About preview */}
       <section className="rule-top py-20">

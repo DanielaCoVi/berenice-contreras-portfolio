@@ -15,6 +15,7 @@ import { ThemeProvider } from "../lib/theme";
 import { I18nProvider } from "../lib/i18n";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
+import { BackToTop } from "../components/back-to-top";
 
 function NotFoundComponent() {
   return (
@@ -136,6 +137,7 @@ function RootComponent() {
               <Outlet />
             </main>
             <SiteFooter />
+            <BackToTop />
           </div>
         </I18nProvider>
       </ThemeProvider>
