@@ -79,9 +79,9 @@
   --card-foreground: oklch(0.208 0.026 264.1);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.208 0.026 264.1);
-  --primary: oklch(0.615 0.146 55.7);
-  --primary-hover: oklch(0.687 0.144 60.5);
-  --primary-foreground: oklch(1 0 0);
+  --primary: oklch(0.702 0.158 60.5); /* #F39B32 tuned for light bg */
+  --primary-hover: oklch(0.762 0.153 65.5);
+  --primary-foreground: oklch(0.166 0.011 249.5);
   --secondary: oklch(0.965 0.004 106.4);
   --secondary-foreground: oklch(0.208 0.026 264.1);
   --muted: oklch(0.965 0.004 106.4);
