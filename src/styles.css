@@ -67,7 +67,7 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.272 0.008 258); /* #23262A */
   --input: oklch(0.272 0.008 258);
-  --ring: oklch(0.615 0.146 55.7);
+  --ring: oklch(0.762 0.153 65.5);
 }
 
 .light {
