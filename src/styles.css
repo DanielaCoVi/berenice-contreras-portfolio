@@ -138,3 +138,47 @@
 @utility rule-top {
   border-top: 1px solid var(--color-border);
 }
+
+@utility cta-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    transform: scale(1.03);
+    box-shadow: 0 10px 34px -8px color-mix(in oklab, var(--color-primary) 55%, transparent);
+  }
+}
+
+@utility cta-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 60%, var(--color-border));
+    background-color: color-mix(in oklab, var(--color-primary) 10%, var(--color-surface));
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px -12px color-mix(in oklab, var(--color-foreground) 30%, transparent);
+  }
+}
+
+@utility brand-mark {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  letter-spacing: -0.015em;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+}
