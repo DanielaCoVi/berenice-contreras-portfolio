@@ -486,7 +486,13 @@ export const caseOne = {
       es: "Diagrama: cinco sistemas, validación de negocio, modelo analítico y dashboard ejecutivo como fuente única de verdad",
       en: "Diagram: five systems, business validation, analytics model and executive dashboard as a single source of truth",
     } as L,
+    flowTitle: { es: "Fuente única de verdad", en: "Single Source of Truth" } as L,
+    flowSteps: {
+      es: ["5 Sistemas", "Validación de negocio", "Modelo analítico", "Dashboard ejecutivo"],
+      en: ["5 Systems", "Business Validation", "Analytics Model", "Executive Dashboard"],
+    } as LArr,
   },
+
   dashboard: {
     title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
     alt: {
