@@ -486,7 +486,13 @@ export const caseOne = {
       es: "Diagrama: cinco sistemas, validación de negocio, modelo analítico y dashboard ejecutivo como fuente única de verdad",
       en: "Diagram: five systems, business validation, analytics model and executive dashboard as a single source of truth",
     } as L,
+    flowTitle: { es: "Fuente única de verdad", en: "Single Source of Truth" } as L,
+    flowSteps: {
+      es: ["5 Sistemas", "Validación de negocio", "Modelo analítico", "Dashboard ejecutivo"],
+      en: ["5 Systems", "Business Validation", "Analytics Model", "Executive Dashboard"],
+    } as LArr,
   },
+
   dashboard: {
     title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
     alt: {
@@ -533,7 +539,13 @@ export const caseOne = {
       es: "Métricas de impacto: 25 sedes, 187K+ registros mensuales y 5 sistemas integrados",
       en: "Impact metrics: 25 sites, 187K+ monthly records and 5 integrated systems",
     } as L,
+    metrics: [
+      { value: "25", label: { es: "sedes", en: "Sites" } as L },
+      { value: "187K+", label: { es: "registros mensuales", en: "Monthly Records" } as L },
+      { value: "5", label: { es: "sistemas integrados", en: "Integrated Systems" } as L },
+    ],
   },
+
   learned: {
     label: { es: "Lo que aprendí", en: "What I learned" } as L,
     p: {
@@ -634,7 +646,16 @@ export const caseTwo = {
       es: "Diagrama: canal físico más canal digital convergen en un lenguaje compartido y una visión omnicanal",
       en: "Diagram: physical and digital channels converge into a shared language and an omnichannel view",
     } as L,
+    flowInputs: {
+      es: ["Canal físico", "Canal digital"],
+      en: ["Physical Channel", "Digital Channel"],
+    } as LArr,
+    flowSteps: {
+      es: ["Lenguaje compartido", "Visión omnicanal"],
+      en: ["Shared Language", "Omnichannel View"],
+    } as LArr,
   },
+
   dashboard: {
     title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
     alt: {
@@ -670,7 +691,13 @@ export const caseTwo = {
       es: "Métricas de impacto: 11 países, USD 65.6M analizados y 8 KPIs estandarizados",
       en: "Impact metrics: 11 countries, USD 65.6M analyzed and 8 standardized KPIs",
     } as L,
+    metrics: [
+      { value: "11", label: { es: "países", en: "Countries" } as L },
+      { value: "USD 65.6M", label: { es: "analizados", en: "Analyzed" } as L },
+      { value: "8", label: { es: "KPIs estandarizados", en: "Standardized KPIs" } as L },
+    ],
   },
+
   reflection: {
     label: { es: "Reflexión", en: "Reflection" } as L,
     quote: {

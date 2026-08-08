@@ -1,6 +1,5 @@
+import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import language from "@/assets/case-02-language.jpg";
-import impactImg from "@/assets/case-02-impact.jpg";
 import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg";
 import { caseTwo } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
@@ -50,16 +49,26 @@ export function CaseTwoBody() {
         {tl(caseTwo.singleReading.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <figure className="overflow-hidden rounded-2xl border border-border">
-          <img
-            src={language}
-            alt={t(caseTwo.singleReading.diagramAlt)}
-            width={1600}
-            height={1000}
-            loading="lazy"
-            className="w-full"
-          />
-        </figure>
+        <div
+          className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-surface px-8 py-12 text-center"
+          role="img"
+          aria-label={t(caseTwo.singleReading.diagramAlt)}
+        >
+          <div className="flex flex-col items-center gap-3">
+            {tl(caseTwo.singleReading.flowInputs).map((input, i) => (
+              <div key={input} className="flex flex-col items-center gap-3">
+                {i > 0 ? <span className="display text-2xl text-primary">+</span> : null}
+                <p className="display text-2xl text-foreground sm:text-3xl">{input}</p>
+              </div>
+            ))}
+          </div>
+          {tl(caseTwo.singleReading.flowSteps).map((step) => (
+            <div key={step} className="flex flex-col items-center gap-4">
+              <ArrowDown className="size-6 text-primary" aria-hidden="true" />
+              <p className="display text-2xl text-foreground sm:text-3xl">{step}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       <Section label={t(caseTwo.dashboard.title)}>
@@ -80,16 +89,17 @@ export function CaseTwoBody() {
         {tl(caseTwo.impact.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <figure className="overflow-hidden rounded-2xl border border-border">
-          <img
-            src={impactImg}
-            alt={t(caseTwo.impact.alt)}
-            width={1600}
-            height={900}
-            loading="lazy"
-            className="w-full"
-          />
-        </figure>
+        <dl className="grid gap-4 sm:grid-cols-3">
+          {caseTwo.impact.metrics.map((m) => (
+            <div
+              key={m.value}
+              className="rounded-2xl border border-border bg-surface p-8 border-l-4 border-l-primary"
+            >
+              <dt className="display text-4xl tabular-nums text-foreground">{m.value}</dt>
+              <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(m.label)}</dd>
+            </div>
+          ))}
+        </dl>
       </Section>
 
       <Section label={t(caseTwo.reflection.label)}>
