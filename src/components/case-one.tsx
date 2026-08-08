@@ -1,6 +1,5 @@
+import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import architecture from "@/assets/case-01-architecture.jpg";
-import impactImg from "@/assets/case-01-impact.jpg";
 import dashboardAsset from "@/assets/dashboard-automas.png";
 import { caseOne } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
@@ -50,16 +49,19 @@ export function CaseOneBody() {
         {tl(caseOne.architecture.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <figure className="overflow-hidden rounded-2xl border border-border">
-          <img
-            src={architecture}
-            alt={t(caseOne.architecture.diagramAlt)}
-            width={1600}
-            height={1008}
-            loading="lazy"
-            className="w-full"
-          />
-        </figure>
+        <div
+          className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-surface px-8 py-12 text-center"
+          role="img"
+          aria-label={t(caseOne.architecture.diagramAlt)}
+        >
+          <p className="eyebrow text-primary">{t(caseOne.architecture.flowTitle)}</p>
+          {tl(caseOne.architecture.flowSteps).map((step, i) => (
+            <div key={step} className="flex flex-col items-center gap-4">
+              {i > 0 ? <ArrowDown className="size-6 text-primary" aria-hidden="true" /> : null}
+              <p className="display text-2xl text-foreground sm:text-3xl">{step}</p>
+            </div>
+          ))}
+        </div>
         <div className="pt-6">
           <h3 className="display text-2xl text-foreground sm:text-3xl">
             {t(caseOne.dashboard.title)}
@@ -88,16 +90,17 @@ export function CaseOneBody() {
         {tl(caseOne.impact.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <figure className="overflow-hidden rounded-2xl border border-border">
-          <img
-            src={impactImg}
-            alt={t(caseOne.impact.alt)}
-            width={1600}
-            height={912}
-            loading="lazy"
-            className="w-full"
-          />
-        </figure>
+        <dl className="grid gap-4 sm:grid-cols-3">
+          {caseOne.impact.metrics.map((m) => (
+            <div
+              key={m.value}
+              className="rounded-2xl border border-border bg-surface p-8 border-l-4 border-l-primary"
+            >
+              <dt className="display text-4xl tabular-nums text-foreground">{m.value}</dt>
+              <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(m.label)}</dd>
+            </div>
+          ))}
+        </dl>
       </Section>
 
       <Section label={t(caseOne.learned.label)}>
