@@ -66,7 +66,7 @@ export function CaseOneBody() {
           </h3>
           <figure className="mt-6 overflow-hidden rounded-2xl border border-border bg-surface">
             <img
-              src={dashboardAsset.url}
+              src={dashboardAsset}
               alt={t(caseOne.dashboard.alt)}
               loading="lazy"
               className="w-full"

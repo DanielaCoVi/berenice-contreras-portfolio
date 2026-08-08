@@ -65,7 +65,7 @@ export function CaseTwoBody() {
       <Section label={t(caseTwo.dashboard.title)}>
         <figure className="overflow-hidden rounded-2xl border border-border bg-surface">
           <img
-            src={dashboardAsset.url}
+            src={dashboardAsset}
             alt={t(caseTwo.dashboard.alt)}
             loading="lazy"
             className="w-full"
