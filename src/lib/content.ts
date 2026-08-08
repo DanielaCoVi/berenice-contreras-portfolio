@@ -682,7 +682,13 @@ export const caseTwo = {
       es: "Métricas de impacto: 11 países, USD 65.6M analizados y 8 KPIs estandarizados",
       en: "Impact metrics: 11 countries, USD 65.6M analyzed and 8 standardized KPIs",
     } as L,
+    metrics: [
+      { value: "11", label: { es: "países", en: "Countries" } as L },
+      { value: "USD 65.6M", label: { es: "analizados", en: "Analyzed" } as L },
+      { value: "8", label: { es: "KPIs estandarizados", en: "Standardized KPIs" } as L },
+    ],
   },
+
   reflection: {
     label: { es: "Reflexión", en: "Reflection" } as L,
     quote: {
