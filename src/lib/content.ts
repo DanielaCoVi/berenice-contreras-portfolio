@@ -646,7 +646,16 @@ export const caseTwo = {
       es: "Diagrama: canal físico más canal digital convergen en un lenguaje compartido y una visión omnicanal",
       en: "Diagram: physical and digital channels converge into a shared language and an omnichannel view",
     } as L,
+    flowInputs: {
+      es: ["Canal físico", "Canal digital"],
+      en: ["Physical Channel", "Digital Channel"],
+    } as LArr,
+    flowSteps: {
+      es: ["Lenguaje compartido", "Visión omnicanal"],
+      en: ["Shared Language", "Omnichannel View"],
+    } as LArr,
   },
+
   dashboard: {
     title: { es: "Dashboard final implementado", en: "Final dashboard implemented" } as L,
     alt: {
