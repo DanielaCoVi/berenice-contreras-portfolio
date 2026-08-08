@@ -1,15 +1,15 @@
 import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import entrevistas from "@/assets/case-04-entrevistas.jpg.asset.json";
-import problema from "@/assets/case-04-problema.jpg.asset.json";
-import inventario from "@/assets/case-04-inventario.jpg.asset.json";
-import blueprint from "@/assets/case-04-blueprint.jpg.asset.json";
-import persona from "@/assets/case-04-persona.jpg.asset.json";
-import mapa from "@/assets/case-04-mapa.jpg.asset.json";
-import views from "@/assets/case-04-views.jpg.asset.json";
-import entrada from "@/assets/case-04-entrada.jpg.asset.json";
-import recetario from "@/assets/case-04-recetario.jpg.asset.json";
-import testing from "@/assets/case-04-testing.jpg.asset.json";
+import entrevistas from "@/assets/case-04-entrevistas.jpg";
+import problema from "@/assets/case-04-problema.jpg";
+import inventario from "@/assets/case-04-inventario.jpg";
+import blueprint from "@/assets/case-04-blueprint.png";
+import persona from "@/assets/case-04-persona.png";
+import mapa from "@/assets/case-04-mapa.jpg";
+import views from "@/assets/case-04-views.jpg";
+import entrada from "@/assets/case-04-entrada.jpg";
+import recetario from "@/assets/case-04-recetario.png";
+import testing from "@/assets/case-04-testing.jpg";
 import { caseFour } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -47,22 +47,22 @@ export function CaseFourBody() {
           <P key={p}>{p}</P>
         ))}
         <Shot
-          src={entrevistas.url}
+          src={entrevistas}
           alt={t(caseFour.knowledge.entrevistasAlt)}
           caption={t(caseFour.knowledge.entrevistasCaption)}
         />
         <Shot
-          src={problema.url}
+          src={problema}
           alt={t(caseFour.knowledge.problemaAlt)}
           caption={t(caseFour.knowledge.problemaCaption)}
         />
         <Shot
-          src={inventario.url}
+          src={inventario}
           alt={t(caseFour.knowledge.inventarioAlt)}
           caption={t(caseFour.knowledge.inventarioCaption)}
         />
         <Shot
-          src={blueprint.url}
+          src={blueprint}
           alt={t(caseFour.knowledge.blueprintAlt)}
           caption={t(caseFour.knowledge.blueprintCaption)}
         />
@@ -78,7 +78,7 @@ export function CaseFourBody() {
           </p>
         </blockquote>
         <Shot
-          src={persona.url}
+          src={persona}
           alt={t(caseFour.people.personaAlt)}
           caption={t(caseFour.people.personaCaption)}
         />
@@ -90,22 +90,22 @@ export function CaseFourBody() {
         ))}
 
         <Shot
-          src={mapa.url}
+          src={mapa}
           alt={t(caseFour.autonomy.mapaAlt)}
           caption={t(caseFour.autonomy.mapaCaption)}
         />
         <Shot
-          src={views.url}
+          src={views}
           alt={t(caseFour.autonomy.viewsAlt)}
           caption={t(caseFour.autonomy.viewsCaption)}
         />
         <Shot
-          src={entrada.url}
+          src={entrada}
           alt={t(caseFour.autonomy.entradaAlt)}
           caption={t(caseFour.autonomy.entradaCaption)}
         />
         <Shot
-          src={recetario.url}
+          src={recetario}
           alt={t(caseFour.autonomy.recetarioAlt)}
           caption={t(caseFour.autonomy.recetarioCaption)}
         />
@@ -125,7 +125,7 @@ export function CaseFourBody() {
         </div>
 
         <Shot
-          src={testing.url}
+          src={testing}
           alt={t(caseFour.autonomy.testingAlt)}
           caption={t(caseFour.autonomy.testingCaption)}
         />

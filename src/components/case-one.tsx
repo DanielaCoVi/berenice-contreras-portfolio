@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import architecture from "@/assets/case-01-architecture.jpg";
 import impactImg from "@/assets/case-01-impact.jpg";
-import dashboardAsset from "@/assets/dashboard-automas.png.asset.json";
+import dashboardAsset from "@/assets/dashboard-automas.png";
 import { caseOne } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -66,7 +66,7 @@ export function CaseOneBody() {
           </h3>
           <figure className="mt-6 overflow-hidden rounded-2xl border border-border bg-surface">
             <img
-              src={dashboardAsset.url}
+              src={dashboardAsset}
               alt={t(caseOne.dashboard.alt)}
               loading="lazy"
               className="w-full"

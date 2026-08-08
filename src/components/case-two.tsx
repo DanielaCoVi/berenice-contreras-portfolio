@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import language from "@/assets/case-02-language.jpg";
 import impactImg from "@/assets/case-02-impact.jpg";
-import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg.asset.json";
+import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg";
 import { caseTwo } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -65,7 +65,7 @@ export function CaseTwoBody() {
       <Section label={t(caseTwo.dashboard.title)}>
         <figure className="overflow-hidden rounded-2xl border border-border bg-surface">
           <img
-            src={dashboardAsset.url}
+            src={dashboardAsset}
             alt={t(caseTwo.dashboard.alt)}
             loading="lazy"
             className="w-full"
