@@ -1,15 +1,15 @@
 import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import entrevistas from "@/assets/case-04-entrevistas.jpg";
-import problema from "@/assets/case-04-problema.jpg";
-import inventario from "@/assets/case-04-inventario.jpg";
+import entrevistas from "@/assets/case-04-entrevistas.png";
+import problema from "@/assets/case-04-problema.png";
+import inventario from "@/assets/case-04-inventario.png";
 import blueprint from "@/assets/case-04-blueprint.png";
 import persona from "@/assets/case-04-persona.png";
-import mapa from "@/assets/case-04-mapa.jpg";
-import views from "@/assets/case-04-views.jpg";
-import entrada from "@/assets/case-04-entrada.jpg";
+import mapa from "@/assets/case-04-mapa.png";
+import views from "@/assets/case-04-views.png";
+import entrada from "@/assets/case-04-entrada.png";
 import recetario from "@/assets/case-04-recetario.png";
-import testing from "@/assets/case-04-testing.jpg";
+import testing from "@/assets/case-04-testing.png";
 import { caseFour } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
