@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import language from "@/assets/case-02-language.jpg";
 import impactImg from "@/assets/case-02-impact.jpg";
-import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg.asset.json";
+import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg";
 import { caseTwo } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 

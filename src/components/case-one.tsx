@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import architecture from "@/assets/case-01-architecture.jpg";
 import impactImg from "@/assets/case-01-impact.jpg";
-import dashboardAsset from "@/assets/dashboard-automas.png.asset.json";
+import dashboardAsset from "@/assets/dashboard-automas.png";
 import { caseOne } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
