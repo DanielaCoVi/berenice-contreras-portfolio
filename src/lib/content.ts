@@ -539,7 +539,13 @@ export const caseOne = {
       es: "Métricas de impacto: 25 sedes, 187K+ registros mensuales y 5 sistemas integrados",
       en: "Impact metrics: 25 sites, 187K+ monthly records and 5 integrated systems",
     } as L,
+    metrics: [
+      { value: "25", label: { es: "sedes", en: "Sites" } as L },
+      { value: "187K+", label: { es: "registros mensuales", en: "Monthly Records" } as L },
+      { value: "5", label: { es: "sistemas integrados", en: "Integrated Systems" } as L },
+    ],
   },
+
   learned: {
     label: { es: "Lo que aprendí", en: "What I learned" } as L,
     p: {
