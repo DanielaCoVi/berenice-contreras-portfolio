@@ -54,9 +54,11 @@ function ContactCard({
         />
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 min-w-0">
         <p className="eyebrow">{label}</p>
-        <p className="mt-3 text-lg font-medium text-foreground md:text-xl">{value}</p>
+        <p className="mt-3 break-words text-lg font-medium leading-snug text-foreground md:text-xl">
+          {value}
+        </p>
         <p className="mt-2 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-primary">
           {action}
         </p>
