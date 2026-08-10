@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
-import type { Localized } from "@/lib/content";
+import type { L } from "@/lib/content";
 
-export type Metric = { value: string; label: Localized };
+export type Metric = { value: string; label: L };
 
 export function MetricCards({ metrics }: { metrics: readonly Metric[] }) {
   const { t } = useI18n();
