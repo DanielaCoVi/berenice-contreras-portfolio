@@ -387,9 +387,11 @@ export const contact = {
   emailLabel: { es: "Email", en: "Email" } as L,
   emailAction: { es: "Escríbeme", en: "Send email" } as L,
   linkedinLabel: { es: "LinkedIn", en: "LinkedIn" } as L,
+  linkedinValue: { es: "Perfil de LinkedIn", en: "LinkedIn Profile" } as L,
   linkedinAction: { es: "Ver perfil", en: "View profile" } as L,
   cvLabel: { es: "CV", en: "Resume" } as L,
-  cvAction: { es: "Descargar CV", en: "Download resume" } as L,
+  cvValue: { es: "Descargar CV", en: "Download resume" } as L,
+  cvAction: { es: "Descargar PDF", en: "Download PDF" } as L,
 };
 
 export const ui = {
