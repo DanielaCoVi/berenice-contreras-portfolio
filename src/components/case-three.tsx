@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { MetricCards } from "@/components/metric-cards";
 import persona from "@/assets/case-03-persona.png";
 import insights from "@/assets/case-03-insights.png";
 import home from "@/assets/case-03-home.png";
@@ -101,17 +102,7 @@ export function CaseThreeBody() {
         {tl(caseThree.impact.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <dl className="grid gap-4 sm:grid-cols-3">
-          {caseThree.impact.metrics.map((m) => (
-            <div
-              key={m.value}
-              className="rounded-2xl border border-border bg-surface p-8 border-l-4 border-l-primary"
-            >
-              <dt className="display text-4xl tabular-nums text-foreground">{m.value}</dt>
-              <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(m.label)}</dd>
-            </div>
-          ))}
-        </dl>
+        <MetricCards metrics={caseThree.impact.metrics} />
       </Section>
 
       <Section label={t(caseThree.reflection.label)}>

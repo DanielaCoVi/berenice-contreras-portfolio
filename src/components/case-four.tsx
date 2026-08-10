@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { MetricCards } from "@/components/metric-cards";
 import entrevistas from "@/assets/case-04-entrevistas.png";
 import problema from "@/assets/case-04-problema.png";
 import inventario from "@/assets/case-04-inventario.png";
@@ -135,17 +136,7 @@ export function CaseFourBody() {
         {tl(caseFour.impact.p).map((p) => (
           <P key={p}>{p}</P>
         ))}
-        <dl className="grid gap-4 sm:grid-cols-3">
-          {caseFour.impact.metrics.map((m) => (
-            <div
-              key={m.value}
-              className="rounded-2xl border border-border bg-surface p-8 border-l-4 border-l-primary"
-            >
-              <dt className="display text-4xl tabular-nums text-foreground">{m.value}</dt>
-              <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(m.label)}</dd>
-            </div>
-          ))}
-        </dl>
+        <MetricCards metrics={caseFour.impact.metrics} />
       </Section>
 
       <Section label={t(caseFour.reflection.label)}>
