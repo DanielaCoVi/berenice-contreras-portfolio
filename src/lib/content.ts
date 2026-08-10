@@ -376,19 +376,20 @@ export const resume = {
 
 export const contact = {
   title: { es: "Contacto", en: "Contact" } as L,
-  intro: {
-    es: "Disponible para roles senior, consultoría de producto y proyectos de sistemas complejos.",
-    en: "Available for senior roles, product consulting and complex systems work.",
+  headline: {
+    es: "Disponible para colaborar en productos, plataformas y sistemas complejos.",
+    en: "Available to collaborate on products, platforms, and complex systems.",
   } as L,
-  name: { es: "Nombre", en: "Name" } as L,
-  email: { es: "Email", en: "Email" } as L,
-  message: { es: "Mensaje", en: "Message" } as L,
-  send: { es: "Enviar mensaje", en: "Send message" } as L,
-  sent: {
-    es: "Gracias. Te responderé en breve.",
-    en: "Thank you. I'll get back to you shortly.",
+  subheadline: {
+    es: "Actualmente disponible para roles senior, consultoría de producto y proyectos centrados en operaciones, analítica y experiencia enterprise.",
+    en: "Currently available for senior roles, product consulting, and projects focused on operations, analytics, and enterprise experience.",
   } as L,
-  or: { es: "También puedes escribirme directamente", en: "You can also reach me directly" } as L,
+  emailLabel: { es: "Email", en: "Email" } as L,
+  emailAction: { es: "Escríbeme", en: "Send email" } as L,
+  linkedinLabel: { es: "LinkedIn", en: "LinkedIn" } as L,
+  linkedinAction: { es: "Ver perfil", en: "View profile" } as L,
+  cvLabel: { es: "CV", en: "Resume" } as L,
+  cvAction: { es: "Descargar CV", en: "Download resume" } as L,
 };
 
 export const ui = {
