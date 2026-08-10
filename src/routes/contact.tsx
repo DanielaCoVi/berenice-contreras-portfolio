@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { Mail, Linkedin, FileText, ArrowUpRight } from "lucide-react";
 import { contact, site } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -22,112 +22,99 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
+function ContactCard({
+  href,
+  icon: Icon,
+  label,
+  value,
+  action,
+  external = false,
+}: {
+  href: string;
+  icon: React.ElementType;
+  label: string;
+  value: string;
+  action: string;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="group relative flex flex-col justify-between rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-card hover:shadow-[0_12px_40px_-16px_color-mix(in_oklab,var(--color-primary)_18%,transparent)] md:p-8"
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-background text-primary transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/10">
+          <Icon className="h-5 w-5" strokeWidth={1.5} />
+        </div>
+        <ArrowUpRight
+          className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary"
+          strokeWidth={1.5}
+        />
+      </div>
+
+      <div className="mt-10 min-w-0">
+        <p className="eyebrow">{label}</p>
+        <p className="mt-3 break-words text-lg font-medium leading-snug text-foreground md:text-xl">
+          {value}
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-primary">
+          {action}
+        </p>
+      </div>
+    </a>
+  );
+}
+
 function ContactPage() {
   const { t } = useI18n();
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const inputClass =
-    "w-full rounded-md border border-border bg-surface px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:outline-none";
+  const links = [
+    {
+      href: `mailto:${site.email}`,
+      icon: Mail,
+      label: t(contact.emailLabel),
+      value: site.email,
+      action: t(contact.emailAction),
+      external: false,
+    },
+    {
+      href: site.linkedin,
+      icon: Linkedin,
+      label: t(contact.linkedinLabel),
+      value: t(contact.linkedinValue),
+      action: t(contact.linkedinAction),
+      external: true,
+    },
+    {
+      href: site.cv,
+      icon: FileText,
+      label: t(contact.cvLabel),
+      value: t(contact.cvValue),
+      action: t(contact.cvAction),
+      external: true,
+    },
+  ];
 
   return (
     <div className="mx-auto max-w-6xl px-6">
       <header className="py-24 md:py-32">
-        <h1 className="display text-5xl sm:text-6xl">{t(contact.title)}</h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          {t(contact.intro)}
+        <h1 className="display max-w-4xl text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
+          {t(contact.headline)}
+        </h1>
+        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+          {t(contact.subheadline)}
         </p>
       </header>
 
-      <div className="rule-top grid gap-16 py-16 md:grid-cols-12">
-        <div className="md:col-span-7">
-          {sent ? (
-            <p role="status" className="display text-2xl text-foreground">
-              {t(contact.sent)}
-            </p>
-          ) : (
-            <form
-              className="space-y-6"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const subject = encodeURIComponent(`Portfolio · ${form.name}`);
-                const body = encodeURIComponent(`${form.message}\n\n${form.email}`);
-                window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-                setSent(true);
-              }}
-            >
-              <div>
-                <label htmlFor="name" className="mb-2 block text-sm font-medium">
-                  {t(contact.name)}
-                </label>
-                <input
-                  id="name"
-                  required
-                  className={inputClass}
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="mb-2 block text-sm font-medium">
-                  {t(contact.email)}
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  className={inputClass}
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                  {t(contact.message)}
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={6}
-                  className={inputClass}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
-              >
-                {t(contact.send)}
-              </button>
-            </form>
-          )}
+      <section className="rule-top pb-32 pt-16">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {links.map((link) => (
+            <ContactCard key={link.label} {...link} />
+          ))}
         </div>
-
-        <aside className="md:col-span-4 md:col-start-9">
-          <p className="eyebrow">{t(contact.or)}</p>
-          <ul className="mt-6 space-y-4">
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="text-lg text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
-              >
-                {site.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </aside>
-      </div>
+      </section>
     </div>
   );
 }
