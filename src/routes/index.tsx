@@ -64,6 +64,15 @@ function Index() {
               >
                 {t(home.ctaSecondary)}
               </Link>
+              <a
+                href={site.cv}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2 py-3.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+              >
+                CV (PDF)
+                <ArrowUpRight className="size-4" />
+              </a>
             </div>
           </Reveal>
         </div>
