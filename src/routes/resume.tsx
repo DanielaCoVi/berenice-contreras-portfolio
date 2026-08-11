@@ -32,8 +32,13 @@ function ResumePage() {
       <header className="flex flex-wrap items-end justify-between gap-8 py-24 md:py-32">
         <div className="max-w-2xl">
           <h1 className="display text-5xl sm:text-6xl">{t(resume.title)}</h1>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t(resume.intro)}</p>
+          {tl(resume.intro).map((p) => (
+            <p key={p} className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              {p}
+            </p>
+          ))}
         </div>
+
         <a
           href={site.cv}
           target="_blank"
