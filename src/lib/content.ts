@@ -148,7 +148,12 @@ export const about = {
       } as L,
     },
   ],
+  closing: {
+    es: "Diseño productos que ayudan a organizaciones a alinear datos, procesos y personas para escalar operaciones sin perder visibilidad ni capacidad de decisión.",
+    en: "I design products that help organizations align data, processes and people to scale operations without losing visibility or decision-making capacity.",
+  } as L,
 };
+
 
 export type CaseStudy = {
   slug: string;
