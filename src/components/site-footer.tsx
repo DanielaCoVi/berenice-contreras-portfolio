@@ -47,7 +47,8 @@ export function SiteFooter() {
             <li>
               <a
                 href={site.cv}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 CV (PDF)

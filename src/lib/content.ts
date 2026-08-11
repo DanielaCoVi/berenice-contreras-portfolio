@@ -22,7 +22,7 @@ export const site = {
   location: { es: "Latam", en: "Latam" } as L,
   email: "berenicecontrerasvillafuerte@gmail.com",
   linkedin: "https://www.linkedin.com/in/berenice-contreras-villafuerte-891792a8/",
-  cv: "/berenice-contreras-cv.pdf",
+  cv: "/Berenice_Contreras_CV_2026.pdf",
 };
 
 export const home = {
