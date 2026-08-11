@@ -36,7 +36,8 @@ function ResumePage() {
         </div>
         <a
           href={site.cv}
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <Download className="size-4" />
