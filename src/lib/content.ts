@@ -148,7 +148,12 @@ export const about = {
       } as L,
     },
   ],
+  closing: {
+    es: "Diseño productos que ayudan a organizaciones a alinear datos, procesos y personas para escalar operaciones sin perder visibilidad ni capacidad de decisión.",
+    en: "I design products that help organizations align data, processes and people to scale operations without losing visibility or decision-making capacity.",
+  } as L,
 };
+
 
 export type CaseStudy = {
   slug: string;
@@ -325,9 +330,15 @@ export const work = {
 export const resume = {
   title: { es: "Trayectoria", en: "Resume" } as L,
   intro: {
-    es: "Especializada en productos analíticos, plataformas enterprise y sistemas internos donde datos, procesos y personas necesitan alinearse para escalar con confianza.",
-    en: "Specialized in analytics products, enterprise platforms and internal systems where data, processes and people need to align in order to scale with confidence.",
-  } as L,
+    es: [
+      "Los últimos años de mi carrera han estado enfocados en una misma pregunta: ¿Cómo ayudamos a las organizaciones a tomar mejores decisiones cuando operan en entornos complejos?",
+      "Esa pregunta me ha llevado a trabajar en plataformas analíticas, productos SaaS, herramientas internas y sistemas utilizados por equipos distribuidos en Latinoamérica y Norteamérica.",
+    ],
+    en: [
+      "The last few years of my career have revolved around a single question: how do we help organizations make better decisions when they operate in complex environments?",
+      "That question has led me to work on analytics platforms, SaaS products, internal tools and systems used by distributed teams across Latin America and North America.",
+    ],
+  } as LArr,
   download: { es: "Descargar CV", en: "Download CV" } as L,
   experienceTitle: { es: "Experiencia", en: "Experience" } as L,
   experience: {
@@ -338,14 +349,12 @@ export const resume = {
     } as L,
     body: {
       es: [
-        "Diseño plataformas analíticas, sistemas internos y productos enterprise para organizaciones en Latinoamérica y Norteamérica.",
-        "Mi trabajo se centra en transformar información compleja en sistemas que permitan tomar decisiones con mayor claridad y reduzcan la complejidad operativa.",
-        "Los proyectos incluyen plataformas financieras multisede, productos SaaS, sistemas internos y herramientas analíticas para la toma de decisiones.",
+        "Diseño productos donde negocio, datos y experiencia necesitan trabajar bajo una misma lógica para coordinar operaciones, comprender información y facilitar la toma de decisiones.",
+        "He participado en iniciativas relacionadas con analítica financiera multisede, retail omnicanal, plataformas impulsadas por inteligencia artificial y sistemas operativos internos.",
       ],
       en: [
-        "I design analytics platforms, internal systems and enterprise products for organizations across Latin America and North America.",
-        "My work focuses on turning complex information into systems that enable clearer decisions and reduce operational complexity.",
-        "Projects include multi-site financial platforms, SaaS products, internal systems and analytics tools for decision making.",
+        "I design products where business, data and experience need to work under a single logic to coordinate operations, make sense of information and support decision making.",
+        "I have contributed to initiatives across multi-site financial analytics, omnichannel retail, AI-driven platforms and internal operating systems.",
       ],
     } as LArr,
   },
@@ -363,15 +372,36 @@ export const resume = {
   },
   skillsTitle: { es: "Especialidades", en: "Specialties" } as L,
   skills: [
-    "Enterprise UX",
-    "Analytics Platforms",
-    "Information Architecture",
-    "Service Design",
-    "Operational Systems",
-    "Product Strategy",
-    "Research Ops",
-    "Design Systems",
+    {
+      name: "Analytics Platforms",
+      text: {
+        es: "Sistemas diseñados para transformar información en decisiones accionables.",
+        en: "Systems designed to turn information into actionable decisions.",
+      } as L,
+    },
+    {
+      name: "Enterprise UX",
+      text: {
+        es: "Experiencias orientadas a operaciones, plataformas internas y procesos complejos.",
+        en: "Experiences focused on operations, internal platforms and complex processes.",
+      } as L,
+    },
+    {
+      name: "Operational Systems",
+      text: {
+        es: "Transformación de procesos manuales en sistemas escalables y compartidos.",
+        en: "Turning manual processes into scalable, shared systems.",
+      } as L,
+    },
+    {
+      name: "Product Strategy",
+      text: {
+        es: "Alineación entre negocio, datos y usuarios para construir productos con dirección clara.",
+        en: "Alignment between business, data and users to build products with clear direction.",
+      } as L,
+    },
   ],
+
 };
 
 export const contact = {

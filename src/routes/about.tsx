@@ -42,20 +42,25 @@ function AboutPage() {
 
       <section className="rule-top py-20">
         <h2 className="display text-3xl sm:text-4xl">{t(about.approachTitle)}</h2>
-        <ul className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {about.approach.map((item, i) => (
             <Reveal as="li" key={item.name} delay={i * 0.05}>
-              <h3 className="text-lg font-semibold text-foreground">{item.name}</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                {t(item.text)}
-              </p>
+              <div className="group h-full rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-card hover:shadow-[0_12px_40px_-16px_color-mix(in_oklab,var(--color-primary)_18%,transparent)] md:p-8">
+                <p className="eyebrow">{String(i + 1).padStart(2, "0")}</p>
+                <h3 className="mt-6 text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  {item.name}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {t(item.text)}
+                </p>
+              </div>
             </Reveal>
           ))}
         </ul>
       </section>
 
       <section className="rule-top flex flex-wrap items-center justify-between gap-6 py-16">
-        <p className="display text-2xl sm:text-3xl">{t(resume.intro)}</p>
+        <p className="display max-w-3xl text-2xl sm:text-3xl">{t(about.closing)}</p>
         <Link
           to="/resume"
           className="inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
@@ -63,6 +68,7 @@ function AboutPage() {
           {t(resume.title)}
         </Link>
       </section>
+
     </div>
   );
 }

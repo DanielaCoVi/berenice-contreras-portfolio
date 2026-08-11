@@ -32,8 +32,13 @@ function ResumePage() {
       <header className="flex flex-wrap items-end justify-between gap-8 py-24 md:py-32">
         <div className="max-w-2xl">
           <h1 className="display text-5xl sm:text-6xl">{t(resume.title)}</h1>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t(resume.intro)}</p>
+          {tl(resume.intro).map((p) => (
+            <p key={p} className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              {p}
+            </p>
+          ))}
         </div>
+
         <a
           href={site.cv}
           target="_blank"
@@ -79,17 +84,20 @@ function ResumePage() {
 
       <section className="rule-top grid gap-8 py-20 md:grid-cols-12">
         <h2 className="eyebrow md:col-span-3">{t(resume.skillsTitle)}</h2>
-        <ul className="flex flex-wrap gap-2 md:col-span-9">
-          {resume.skills.map((s) => (
-            <li
-              key={s}
-              className="rounded-md border border-border bg-surface px-3 py-1.5 text-sm text-muted-foreground"
-            >
-              {s}
-            </li>
+        <ul className="grid gap-5 md:col-span-9 sm:grid-cols-2">
+          {resume.skills.map((s, i) => (
+            <Reveal as="li" key={s.name} delay={i * 0.05}>
+              <div className="group h-full rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-card hover:shadow-[0_12px_40px_-16px_color-mix(in_oklab,var(--color-primary)_18%,transparent)] md:p-8">
+                <h3 className="text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  {s.name}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{t(s.text)}</p>
+              </div>
+            </Reveal>
           ))}
         </ul>
       </section>
+
     </div>
   );
 }
