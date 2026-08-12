@@ -38,6 +38,46 @@ export function CaseTwoBody() {
         ))}
       </Section>
 
+      <Section label={t(caseTwo.initialState.label)}>
+        {tl(caseTwo.initialState.p).map((p) => (
+          <P key={p}>{p}</P>
+        ))}
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {caseTwo.initialState.gallery.map((item) => (
+            <figure
+              key={item.key}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_14px_40px_-18px_color-mix(in_oklab,var(--color-primary)_45%,transparent)]"
+            >
+              <img
+                src={beforeImages[item.key]}
+                alt={t(item.caption)}
+                loading="lazy"
+                className="w-full border-b border-border object-cover"
+              />
+              <figcaption className="p-6 text-sm leading-relaxed text-muted-foreground">
+                {t(item.caption)}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-border border-l-4 border-l-primary bg-surface p-8">
+          <h3 className="display text-2xl leading-snug text-foreground sm:text-3xl">
+            {t(caseTwo.initialState.transition.title)}
+          </h3>
+          <div className="mt-4 space-y-1">
+            {tl(caseTwo.initialState.transition.p).map((p) => (
+              <p key={p} className="text-lg leading-relaxed text-muted-foreground">
+                {p}
+              </p>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+
+
       <Section label={t(caseTwo.role.label)}>
         {tl(caseTwo.role.p).map((p) => (
           <P key={p}>{p}</P>
