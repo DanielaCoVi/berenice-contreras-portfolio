@@ -796,6 +796,8 @@ export const caseTwo = {
       en: "Impact metrics: 11 countries, USD 65.6M analyzed and 8 standardized KPIs",
     } as L,
     metrics: [
+      { value: "54", label: { es: "Marcas", en: "Brands" } as L },
+      { value: "128", label: { es: "Tiendas", en: "Stores" } as L },
       { value: "11", label: { es: "Países", en: "Countries" } as L },
       { value: "USD 65.6M", label: { es: "Analizados", en: "Analyzed" } as L },
       { value: "8", label: { es: "KPIs estandarizados", en: "Standardized KPIs" } as L },
