@@ -2,8 +2,17 @@ import { ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { MetricCards } from "@/components/metric-cards";
 import dashboardAsset from "@/assets/dashboard-ixcomercio.jpg";
+import beforeHome from "@/assets/ixcomercio-before-home.webp.asset.json";
+import beforeOmnicanal from "@/assets/ixcomercio-before-omnicanal.webp.asset.json";
+import beforeSales from "@/assets/ixcomercio-before-sales.webp.asset.json";
 import { caseTwo } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
+
+const beforeImages: Record<string, string> = {
+  home: beforeHome.url,
+  omnicanal: beforeOmnicanal.url,
+  sales: beforeSales.url,
+};
 
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
