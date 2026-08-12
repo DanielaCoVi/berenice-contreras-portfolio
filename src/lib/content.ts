@@ -624,6 +624,77 @@ export const caseTwo = {
       ],
     } as LArr,
   },
+  initialState: {
+    label: {
+      es: "Estado inicial del ecosistema analítico",
+      en: "Initial state of the analytics ecosystem",
+    } as L,
+    p: {
+      es: [
+        "Antes del rediseño, la organización dependía de múltiples dashboards especializados para interpretar el desempeño comercial.",
+        "Cada vista respondía preguntas distintas y utilizaba estructuras analíticas particulares.",
+        "La información existía, pero estaba distribuida.",
+        "Los equipos necesitaban navegar entre diferentes dashboards para comprender una misma realidad de negocio.",
+      ],
+      en: [
+        "Before the redesign, the organization relied on multiple specialized dashboards to interpret commercial performance.",
+        "Each view answered different questions and used its own analytical structure.",
+        "The information existed, but it was distributed.",
+        "Teams had to navigate between different dashboards to understand one same business reality.",
+      ],
+    } as LArr,
+    gallery: [
+      {
+        key: "home",
+        caption: {
+          es: "Vista ejecutiva utilizada para monitorear ingresos, unidades, presupuesto y forecast.",
+          en: "Executive view used to monitor revenue, units, budget and forecast.",
+        } as L,
+      },
+      {
+        key: "omnicanal",
+        caption: {
+          es: "Vista omnicanal utilizada para analizar desempeño comercial a través de múltiples dimensiones operativas.",
+          en: "Omnichannel view used to analyze commercial performance across multiple operational dimensions.",
+        } as L,
+      },
+      {
+        key: "sales",
+        caption: {
+          es: "Dashboard especializado en ventas utilizado para monitorear desempeño comercial mediante métricas independientes.",
+          en: "Sales-specialized dashboard used to monitor commercial performance through independent metrics.",
+        } as L,
+      },
+    ],
+    transition: {
+      title: {
+        es: "De dashboards fragmentados a una visión compartida",
+        en: "From fragmented dashboards to a shared view",
+      } as L,
+      p: {
+        es: [
+          "La complejidad no estaba en los datos.",
+          "La complejidad estaba en la forma en que cada equipo los interpretaba.",
+        ],
+        en: [
+          "The complexity was not in the data.",
+          "The complexity was in the way each team interpreted it.",
+        ],
+      } as LArr,
+    },
+  },
+  scale: {
+    label: { es: "Escala del ecosistema", en: "Ecosystem scale" } as L,
+    metrics: [
+      { value: "54", label: { es: "Marcas", en: "Brands" } as L },
+      { value: "128", label: { es: "Tiendas", en: "Stores" } as L },
+      { value: "11", label: { es: "Países", en: "Countries" } as L },
+      {
+        value: "B2B + B2C",
+        label: { es: "Ecosistema omnicanal", en: "Omnichannel ecosystem" } as L,
+      },
+    ],
+  },
   role: {
     label: { es: "Mi rol", en: "My role" } as L,
     p: {
