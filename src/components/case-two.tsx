@@ -95,6 +95,10 @@ export function CaseTwoBody() {
         </figcaption>
       </Section>
 
+      <Section label={t(caseTwo.scale.label)}>
+        <MetricCards metrics={caseTwo.scale.metrics} />
+      </Section>
+
       <Section label={t(caseTwo.impact.label)}>
         {tl(caseTwo.impact.p).map((p) => (
           <P key={p}>{p}</P>
