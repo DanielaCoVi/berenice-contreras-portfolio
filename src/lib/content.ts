@@ -690,8 +690,8 @@ export const caseTwo = {
       { value: "128", label: { es: "Tiendas", en: "Stores" } as L },
       { value: "11", label: { es: "Países", en: "Countries" } as L },
       {
-        value: "B2B + B2C",
-        label: { es: "Ecosistema omnicanal", en: "Omnichannel ecosystem" } as L,
+        value: "Ecosistema",
+        label: { es: "Omnicanal", en: "Omnichannel" } as L,
       },
     ],
   },
