@@ -533,8 +533,8 @@ export const caseOne = {
       en: "Executive dashboard with loyalty, scheduling and RTM compliance indicators by site",
     } as L,
     caption: {
-      es: "Dashboard ejecutivo diseñado para consolidar información financiera y operativa de 25 sedes en una única experiencia analítica.",
-      en: "Executive dashboard designed to consolidate financial and operational information from 25 sites into a single analytics experience.",
+      es: "Dashboard ejecutivo diseñado para monitorear cumplimiento RTM, fidelización y agendamiento en 25 sedes mediante una estructura analítica común que conecta métricas operativas y financieras para la toma de decisiones.",
+      en: "Executive dashboard designed to monitor RTM compliance, loyalty and scheduling across 25 sites through a common analytical structure that connects operational and financial metrics for decision making.",
     } as L,
   },
   ai: {
