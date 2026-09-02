@@ -701,10 +701,12 @@ export const caseTwo = {
       es: [
         "Como Product Designer fui responsable de comprender las necesidades de los diferentes stakeholders, estructurar la arquitectura de información y diseñar la experiencia analítica que permitiera interpretar el desempeño comercial desde una única plataforma.",
         "Trabajé junto con equipos de negocio físico y digital para construir un lenguaje común que facilitara la toma de decisiones.",
+        "La experiencia fue diseñada para apoyar la toma de decisiones de Regional Managers, Retail Operations Leads y Brand Managers responsables del desempeño comercial en distintos países, canales y marcas.",
       ],
       en: [
         "As Product Designer I was responsible for understanding stakeholder needs, structuring the information architecture and designing the analytics experience that allowed commercial performance to be read from a single platform.",
         "I worked with physical and digital business teams to build a common language that supported decision making.",
+        "The experience was designed to support decision making for Regional Managers, Retail Operations Leads and Brand Managers responsible for commercial performance across different countries, channels and brands.",
       ],
     } as LArr,
   },
