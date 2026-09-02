@@ -1092,9 +1092,10 @@ export const caseFour = {
       en: "Digital recipe book with raw material calculation",
     } as L,
     recetarioCaption: {
-      es: "Recetario digital utilizado para automatizar cálculos de materia prima y estandarizar la producción diaria.",
-      en: "Digital recipe book used to automate raw material calculations and standardize daily production.",
+      es: "Recetario inteligente utilizado para transformar cálculos manuales de materia prima en un proceso repetible, trazable y escalable para toda la operación.",
+      en: "Intelligent recipe book used to turn manual raw material calculations into a repeatable, traceable and scalable process for the whole operation.",
     } as L,
+
     flowFrom: { es: "Hojas de cálculo", en: "Spreadsheets" } as L,
     flowMid: { es: "Procesos estandarizados", en: "Standardized Processes" } as L,
     flowTo: { es: "Operación autónoma", en: "Autonomous Operations" } as L,
